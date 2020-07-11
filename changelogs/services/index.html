@@ -1,0 +1,1721 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Simple EVE Api Tool Documentation">
+      
+      
+        <link rel="canonical" href="https://eveseat.github.io/docs/changelogs/services/">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
+    
+    
+      
+        <title>Services - SeAT Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.89dc9fe3.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecd4686e.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/extra_typo.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tabs.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-119530306-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#services-change-logs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://eveseat.github.io/docs" title="SeAT Documentation" class="md-header-nav__button md-logo" aria-label="SeAT Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SeAT Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Services
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eveseat/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://eveseat.github.io/docs" title="SeAT Documentation" class="md-nav__button md-logo" aria-label="SeAT Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    SeAT Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eveseat/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/requirements/" title="Requirements" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/basic_installation/" title="Basic Installation" class="md-nav__link">
+      Basic Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/docker_installation/" title="Docker Installation" class="md-nav__link">
+      Docker Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Manual Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Manual Installation" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Manual Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/centos/" title="CentOS" class="md-nav__link">
+      CentOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/debian/" title="Debian" class="md-nav__link">
+      Debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/ubuntu/" title="Ubuntu" class="md-nav__link">
+      Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/generic/" title="Generic" class="md-nav__link">
+      Generic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Webservers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Webservers" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Webservers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/nginx/" title="Nginx" class="md-nav__link">
+      Nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/traefik/" title="Traefik" class="md-nav__link">
+      Traefik
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/caddy/" title="Caddy" class="md-nav__link">
+      Caddy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/apache/" title="Apache" class="md-nav__link">
+      Apache
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Upgrading
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Upgrading" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Upgrading
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/from_seat_2_0/" title="From SeAT 2.0" class="md-nav__link">
+      From SeAT 2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/from_seat_1_0/" title="From SeAT 1.0" class="md-nav__link">
+      From SeAT 1.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Configuration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/esi_configuration/" title="ESI Configuration" class="md-nav__link">
+      ESI Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Email Setup
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Email Setup" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Email Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/email_setup/mailgun/" title="Mailgun" class="md-nav__link">
+      Mailgun
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/email_setup/gmail/" title="GMail" class="md-nav__link">
+      GMail
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/env_file_reference/" title="Env File Reference" class="md-nav__link">
+      Env File Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/eve_administrative_contact/" title="EVE Administrative Contact" class="md-nav__link">
+      EVE Administrative Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/configuration_overload/" title="Configuration Overload" class="md-nav__link">
+      Configuration Overload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/sde_overload/" title="SDE Overload" class="md-nav__link">
+      SDE Overload
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Admin Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Admin Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Admin Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/docker_admin/" title="Docker Admin" class="md-nav__link">
+      Docker Admin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/role_based_access_control/" title="Role Based Access Control" class="md-nav__link">
+      Role Based Access Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/understanding_tracking/" title="Understanding Tracking" class="md-nav__link">
+      Understanding Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/scaled_deployments/" title="Scaled Deployments" class="md-nav__link">
+      Scaled Deployments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Developer Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developer Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Developer Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/developer_installation/" title="Developer Installation" class="md-nav__link">
+      Developer Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/general_guide/" title="General Guide" class="md-nav__link">
+      General Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/job_queue_flow/" title="Job Queue Flow" class="md-nav__link">
+      Job Queue Flow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/development_tips/" title="Development Tips" class="md-nav__link">
+      Development Tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/core_package_breakdown/" title="Core Package Breakdown" class="md-nav__link">
+      Core Package Breakdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/package_development/" title="Package Development" class="md-nav__link">
+      Package Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/seat_api/" title="SeAT API" class="md-nav__link">
+      SeAT API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../styling/" title="Styling" class="md-nav__link">
+      Styling
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../community_packages/" title="Community Packages" class="md-nav__link">
+      Community Packages
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      About
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="About" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/contact/" title="Contact" class="md-nav__link">
+      Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/reporting_bugs/" title="Reporting Bugs" class="md-nav__link">
+      Reporting Bugs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-pre-alpha" class="md-nav__link">
+    1.0-pre-alpha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    1.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    1.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    1.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    1.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104" class="md-nav__link">
+    1.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    1.0.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106" class="md-nav__link">
+    1.0.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" class="md-nav__link">
+    1.0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010" class="md-nav__link">
+    1.0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108" class="md-nav__link">
+    1.0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109" class="md-nav__link">
+    1.0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1011" class="md-nav__link">
+    1.0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1012" class="md-nav__link">
+    1.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1013" class="md-nav__link">
+    1.0.13
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1014" class="md-nav__link">
+    1.0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1015" class="md-nav__link">
+    1.0.15
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1016" class="md-nav__link">
+    1.0.16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1017" class="md-nav__link">
+    1.0.17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1018" class="md-nav__link">
+    1.0.18
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1019" class="md-nav__link">
+    1.0.19
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1020" class="md-nav__link">
+    1.0.20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1021" class="md-nav__link">
+    1.0.21
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1022" class="md-nav__link">
+    1.0.22
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1023" class="md-nav__link">
+    1.0.23
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha1" class="md-nav__link">
+    2.0.0-alpha1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha2" class="md-nav__link">
+    2.0.0-alpha2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    2.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    2.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202" class="md-nav__link">
+    2.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#203" class="md-nav__link">
+    2.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204" class="md-nav__link">
+    2.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#205" class="md-nav__link">
+    2.0.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#206" class="md-nav__link">
+    2.0.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#207" class="md-nav__link">
+    2.0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#208" class="md-nav__link">
+    2.0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#209" class="md-nav__link">
+    2.0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2010" class="md-nav__link">
+    2.0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2011" class="md-nav__link">
+    2.0.11
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/eveseat/docs/edit/master/docs/changelogs/services.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
+<h1 id="services-change-logs">services change logs<a class="headerlink" href="#services-change-logs" title="Permanent link">&para;</a></h1>
+<p>Generated with: <code>git log --pretty=format:"%h%&gt;(12)%ad %&lt;(7)%aN%d %s" --date=short</code></p>
+<h3 id="10-pre-alpha">1.0-pre-alpha<a class="headerlink" href="#10-pre-alpha" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">93958d6  2015-11-27 Leon Jacobs (tag: 1.0-pre-alpha) Update README</span>
+<span class="err">666036a  2015-11-27 Leon Jacobs Add method to get corp wallet transactions</span>
+<span class="err">bcb36f7  2015-11-27 Leon Jacobs Fix filter rule reference</span>
+<span class="err">5e579ec  2015-11-27 Leon Jacobs Add methods to get standings and wallet journal</span>
+<span class="err">91163b3  2015-11-27 Leon Jacobs Fix a join</span>
+<span class="err">bab5d59  2015-11-27 Leon Jacobs Add method to get corp market orders</span>
+<span class="err">6b2734d  2015-11-27 Leon Jacobs Add method to get corp killmails</span>
+<span class="err">513c1e5  2015-11-27 Leon Jacobs Add method to get corp industry jobs</span>
+<span class="err">eb0b9d7  2015-11-27 Leon Jacobs Add method to get corp contracts</span>
+<span class="err">3b2e7eb  2015-11-27 Leon Jacobs Add methods to get corp contacts &amp; labels</span>
+<span class="err">057e1d4  2015-11-27 Leon Jacobs Add method to get corp assets</span>
+<span class="err">907870a  2015-11-27 Leon Jacobs Add methods for corp summary pages</span>
+<span class="err">c4a4977  2015-11-27 Leon Jacobs Small refactor to remove attributes instead of making them blank</span>
+<span class="err">0b1ee7a  2015-11-27 Leon Jacobs Add method to cleanup CCP produced HTML</span>
+<span class="err">11e55c6  2015-11-26 Leon Jacobs Add method to list corporations</span>
+<span class="err">3a76e64  2015-11-26 Leon Jacobs Fix typo</span>
+<span class="err">02eea36  2015-11-26 Leon Jacobs Add ability to just dump query and continue load</span>
+<span class="err">c71ca03  2015-11-21 Leon Jacobs Add method to get character standings</span>
+<span class="err">be1c6db  2015-11-21 Leon Jacobs Add method to get character research info</span>
+<span class="err">7d0105c  2015-11-21 Leon Jacobs Add method to get character pi</span>
+<span class="err">6ea00fb  2015-11-21 Leon Jacobs Add methods to get character market orders</span>
+<span class="err">18e3580  2015-11-20 Leon Jacobs Add method comments</span>
+<span class="err">4daabd8  2015-11-20 Leon Jacobs Add method to get character industry</span>
+<span class="err">196e968  2015-11-20 Leon Jacobs Add method to get contract information</span>
+<span class="err">3ad8de1  2015-11-20 Leon Jacobs Add method to get killmails</span>
+<span class="err">2c5ca99  2015-11-20 Leon Jacobs Lock type image to max 32/64px</span>
+<span class="err">0071fa7  2015-11-20 Leon Jacobs Add character contact lists and calendar repositories</span>
+<span class="err">11ebe15  2015-10-30 Leon Jacobs Add character notifications repo</span>
+<span class="err">52807cf  2015-10-30 Leon Jacobs Add the Notification Types Seeder</span>
+<span class="err">6560b34  2015-10-30 Leon Jacobs Add rules to ensure columns can not be tampered with</span>
+<span class="err">bb32b1b  2015-10-30 Leon Jacobs Add Character Assets services</span>
+<span class="err">cc493be  2015-10-30 Leon Jacobs Style fixes</span>
+<span class="err">0e56275  2015-10-30 Leon Jacobs Add Mail Service for Characters</span>
+<span class="err">6fa7631  2015-10-29 Leon Jacobs Add Character Wallet Transactions Service</span>
+<span class="err">bd1b364  2015-10-29 Leon Jacobs Add Wallet Journal Services</span>
+<span class="err">22d7e6f  2015-10-29 Leon Jacobs Add option to auto-detect image types</span>
+<span class="err">f899060  2015-10-29 Leon Jacobs Rename method from Character-&gt;Eve</span>
+<span class="err">d3f6fb7  2015-10-28 Leon Jacobs Add more methods for character information</span>
+<span class="err">46910d1  2015-10-28 Leon Jacobs Fix a table ambiguity problem for characterID</span>
+<span class="err">33463b9  2015-10-27 Leon Jacobs Add more repository methods</span>
+<span class="err">f75cd7c  2015-10-27 Leon Jacobs Add Services for Character Skills</span>
+<span class="err">d35099a  2015-10-09 Leon Jacobs Add security repository</span>
+<span class="err">9bcb126  2015-10-09 Leon Jacobs Add more methods for character info</span>
+<span class="err">71e3864  2015-10-09 Leon Jacobs Add a number formatter</span>
+<span class="err">55a29d2  2015-10-08 Leon Jacobs Add repositories to get character information</span>
+<span class="err">04df3b9  2015-10-08 Leon Jacobs Add a query builder filterable helper</span>
+<span class="err">0fdea02  2015-10-08 Leon Jacobs Add SQL debug helper</span>
+<span class="err">6e32c77  2015-10-06 Leon Jacobs Add Respository to support the Queue</span>
+<span class="err">54cda05  2015-10-04 Leon Jacobs Set extention correctly based on image type</span>
+<span class="err">4172206  2015-10-04 Leon Jacobs Add a service to prepare lazy loaded &lt;img&gt; tags</span>
+<span class="err">89dfbb2  2015-10-01 Leon Jacobs Add user modifiction services</span>
+<span class="err">30bdace  2015-09-30 Leon Jacobs Add repositories used in eveseat/web acl</span>
+<span class="err">a8ff125  2015-09-28 Leon Jacobs Update to match eveseat/eveapi Model refactor</span>
+<span class="err">4a69ce0  2015-09-24 Leon Jacobs Add Config file</span>
+<span class="err">ea84fb0  2015-09-24 Leon Jacobs Add Queue Data Source</span>
+<span class="err">2f60e1d  2015-09-24 Leon Jacobs Add EveApiKeyData service</span>
+<span class="err">467fb42  2015-09-24 Leon Jacobs Update badges</span>
+<span class="err">5779eff  2015-09-24 Leon Jacobs Prepare repository for packagist</span>
+<span class="err">a46f437  2015-09-24 Leon Jacobs Initial commit</span>
+</code></pre></div>
+
+
+<h3 id="100">1.0.0<a class="headerlink" href="#100" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">300cdde  2015-11-28 Leon Jacobs (tag: 1.0.0) Update required eveseat package version</span>
+<span class="err">526493c  2015-11-28 Leon Jacobs Style Fixes and Version Bump</span>
+<span class="err">9ded93d  2015-11-28 Leon Jacobs Add registration options</span>
+<span class="err">e5348f0  2015-11-28 Leon Jacobs Update to support new settings features</span>
+<span class="err">f601b60  2015-11-28 Leon Jacobs Move options scope to public</span>
+<span class="err">dcbd238  2015-11-28 Leon Jacobs Add a setting() helper and provide some defaults</span>
+<span class="err">82115c2  2015-11-28 Leon Jacobs Add a settings service</span>
+<span class="err">c72cd8a  2015-11-27 Leon Jacobs Add methods to query corp security info</span>
+<span class="err">5371848  2015-11-27 Leon Jacobs Add method to get corp member tracking</span>
+</code></pre></div>
+
+
+<h3 id="101">1.0.1<a class="headerlink" href="#101" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">f32b199  2015-12-02 Leon Jacobs (tag: 1.0.1) Version Bump</span>
+<span class="err">9a2fe0f  2015-12-02 Leon Jacobs Allow to get/set settings for another user by id</span>
+<span class="err">71504e9  2015-12-02 Leon Jacobs Add default for email notifications</span>
+<span class="err">8109b5c  2015-12-02 Leon Jacobs Add service for database stored schedules</span>
+<span class="err">d4afc21  2015-12-01 Leon Jacobs Ensure we pass integers to the helper</span>
+</code></pre></div>
+
+
+<h3 id="102">1.0.2<a class="headerlink" href="#102" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">717f9fb  2015-12-04 Leon Jacobs (tag: 1.0.2) Add server status method</span>
+<span class="err">f2172dc  2015-12-04 Leon Jacobs Update README.md</span>
+<span class="err">8b65137  2015-12-04 Leon Jacobs Add default MFA setting</span>
+</code></pre></div>
+
+
+<h3 id="103">1.0.3<a class="headerlink" href="#103" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e1c75bb  2015-12-05 Leon Jacobs (tag: 1.0.3) Version Bump</span>
+</code></pre></div>
+
+
+<h3 id="104">1.0.4<a class="headerlink" href="#104" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">d087604  2015-12-13 Leon Jacobs (tag: 1.0.4) Version Bump</span>
+<span class="err">d3d6bd0  2015-12-13 Leon Jacobs Add an admin contact setting</span>
+<span class="err">a5b4135  2015-12-12 Leon Jacobs Order jobs by date</span>
+</code></pre></div>
+
+
+<h3 id="105">1.0.5<a class="headerlink" href="#105" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">af4abdc  2015-12-16 Leon Jacobs (tag: 1.0.5) Version Bump</span>
+<span class="err">cda2f34  2015-12-16 Leon Jacobs Default to english language</span>
+<span class="err">ea02832  2015-12-15 Leon Jacobs Add method to get mail timeline</span>
+<span class="err">28b0933  2015-12-15 Leon Jacobs Suppress errors incase the html is invalid</span>
+<span class="err">012e0e6  2015-12-14 Leon Jacobs Add method to get an email for a character</span>
+</code></pre></div>
+
+
+<h3 id="106">1.0.6<a class="headerlink" href="#106" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">aa17e7d  2015-12-17 Leon Jacobs (tag: 1.0.6) Version Bump</span>
+<span class="err">691dc5c  2015-12-17 Leon Jacobs Prevent dupe or corp chars from showing</span>
+<span class="err">1b93322  2015-12-17 Leon Jacobs Prevent duplicate entries in corp member tracking</span>
+</code></pre></div>
+
+
+<h3 id="107">1.0.7<a class="headerlink" href="#107" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">5734db7  2015-12-20 Leon Jacobs (tag: 1.0.7) Version Bump</span>
+<span class="err">e221f72  2015-12-20 Leon Jacobs Add method to get corp bookmarks</span>
+<span class="err">30699d3  2015-12-20 Leon Jacobs Add method to get character bookmarks</span>
+<span class="err">afd7cba  2015-12-18 Leon Jacobs Add method to get character chat channels</span>
+<span class="err">6ca677b  2015-12-17 Leon Jacobs Second attempt at fixing eveseat/seat#7</span>
+</code></pre></div>
+
+
+<h3 id="1010">1.0.10<a class="headerlink" href="#1010" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e985e13  2015-12-24 Leon Jacobs (tag: 1.0.10) Version Bump</span>
+<span class="err">9e75900  2015-12-24 Leon Jacobs Revert version setting via ~</span>
+<span class="err">cd3878c  2015-12-24 Leon Jacobs (tag: 1.0.9) Version Bump</span>
+<span class="err">a0c30a9  2015-12-24 Leon Jacobs Version Set via ^</span>
+<span class="err">ebd21c7  2015-12-24 Leon Jacobs (tag: 1.0.8) Version Bump</span>
+<span class="err">e7a055d  2015-12-24 Leon Jacobs Set composer versions using ~</span>
+<span class="err">08a50d8  2015-12-24 Leon Jacobs Determine capacity bonus with tower</span>
+<span class="err">aa51300  2015-12-24 Leon Jacobs Temporarily ignore nested groups</span>
+<span class="err">5ff8e0a  2015-12-23 Leon Jacobs Add methods to get starbase related data</span>
+<span class="err">63e9be9  2015-12-21 Leon Jacobs Return paginated results</span>
+</code></pre></div>
+
+
+<h3 id="108">1.0.8<a class="headerlink" href="#108" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>
+</code></pre></div>
+
+
+<h3 id="109">1.0.9<a class="headerlink" href="#109" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">cd3878c  2015-12-24 Leon Jacobs (tag: 1.0.9) Version Bump</span>
+<span class="err">a0c30a9  2015-12-24 Leon Jacobs Version Set via ^</span>
+</code></pre></div>
+
+
+<h3 id="1011">1.0.11<a class="headerlink" href="#1011" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">bb1cd45  2015-12-27 Leon Jacobs (tag: 1.0.11) Version Bump</span>
+<span class="err">0d139b2  2015-12-27 Leon Jacobs Allow starbase details to be loaded by starbase_id</span>
+<span class="err">e985e13  2015-12-24 Leon Jacobs (tag: 1.0.10) Version Bump</span>
+<span class="err">9e75900  2015-12-24 Leon Jacobs Revert version setting via ~</span>
+</code></pre></div>
+
+
+<h3 id="1012">1.0.12<a class="headerlink" href="#1012" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">c3d9aaf  2015-12-28 Leon Jacobs (tag: 1.0.12) Version Bump</span>
+<span class="err">bee194f  2015-12-28 Leon Jacobs Add method to get corporation customs offices</span>
+</code></pre></div>
+
+
+<h3 id="1013">1.0.13<a class="headerlink" href="#1013" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e33ed92  2015-12-29 Leon Jacobs (tag: 1.0.13) Version Bump</span>
+<span class="err">582d719  2015-12-29 Leon Jacobs Fix eveseat/seat#28</span>
+</code></pre></div>
+
+
+<h3 id="1014">1.0.14<a class="headerlink" href="#1014" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e4d521b  2016-01-26 Leon Jacobs (tag: 1.0.14) Version Bump</span>
+<span class="err">96c9fb5  2016-01-26 Leon Jacobs Update copyright</span>
+<span class="err">c9cd51c  2016-01-26 Leon Jacobs Ensure that people.view role is enforced</span>
+<span class="err">2f1e9e3  2016-01-26 Leon Jacobs Add methods for People groups</span>
+<span class="err">f7bb649  2016-01-06 Leon Jacobs Handle some unicode characters for cases like eveseat/seat#13</span>
+<span class="err">0ad1ffa  2016-01-06 Leon Jacobs Code style fix</span>
+</code></pre></div>
+
+
+<h3 id="1015">1.0.15<a class="headerlink" href="#1015" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">570bbd0  2016-04-14 Leon Jacobs (tag: 1.0.15) Version Bump</span>
+<span class="err">630b8af  2016-04-13 Leon Jacobs Remove unused pagination and CS fixes</span>
+<span class="err">cbc4206  2016-04-13 dysath  Services for Corporation Ledger queries. (#5)</span>
+<span class="err">b87d364  2016-01-27 Leon Jacobs Order jobs by creation date</span>
+</code></pre></div>
+
+
+<h3 id="1016">1.0.16<a class="headerlink" href="#1016" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">439fbac  2016-04-29 Leon Jacobs (tag: 1.0.16) Version Bump</span>
+<span class="err">ea240c7  2016-04-29 Leon Jacobs Add defaults for minimum access mask checking settings</span>
+<span class="err">d7b7eaf  2016-04-29 Leon Jacobs Add the search service</span>
+<span class="err">ce085f7  2016-04-29 Leon Jacobs Fix eveseat/seat#93 by filtering corporation_account_balances too</span>
+<span class="err">0c03b8e  2016-04-29 Leon Jacobs Modify timeline method to retrive one specific message</span>
+</code></pre></div>
+
+
+<h3 id="1017">1.0.17<a class="headerlink" href="#1017" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e35f552  2016-05-14 Leon Jacobs (tag: 1.0.17) Version Bump</span>
+<span class="err">10c4a86  2016-05-13 Leon Jacobs Set default values for &#39;allow_sso&#39;</span>
+</code></pre></div>
+
+
+<h3 id="1018">1.0.18<a class="headerlink" href="#1018" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">b3d538d  2016-06-26 Leon Jacobs (tag: 1.0.18) Version Bump</span>
+<span class="err">305a3ab  2016-06-26 Leon Jacobs Sort killmails by newest first.</span>
+<span class="err">2edf0fd  2016-06-26 Leon Jacobs Add module info if a single starbases&#39; info is called</span>
+</code></pre></div>
+
+
+<h3 id="1019">1.0.19<a class="headerlink" href="#1019" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">b2b9995  2016-07-10 Leon Jacobs (tag: 1.0.19) Version Bump</span>
+<span class="err">744e982  2016-07-10 Leon Jacobs Paginate Killmails</span>
+<span class="err">5711563  2016-07-10 Leon Jacobs Paginate contracts. Part of the fix for eveseat/seat#111</span>
+</code></pre></div>
+
+
+<h3 id="1020">1.0.20<a class="headerlink" href="#1020" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">cfcefda</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mf">1.0</span><span class="o">.</span><span class="mi">20</span><span class="p">)</span> <span class="n">Version</span> <span class="n">Bump</span>
+<span class="mi">7</span><span class="n">fa3040</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Add</span> <span class="n">missing</span> <span class="kn">import</span> <span class="nn">of</span> <span class="nn">CharacterSheetCorporationTitles</span>
+<span class="n">b4a8080</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Set</span> <span class="n">available</span> <span class="n">options</span> <span class="ow">and</span> <span class="n">defaults</span> <span class="k">for</span> <span class="n">usage</span> <span class="n">tracking</span>
+<span class="n">b2765c6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Add</span> <span class="n">analytics</span> <span class="n">Jobs</span> <span class="n">using</span> <span class="n">Google</span> <span class="n">Analytics</span> <span class="n">measurement</span> <span class="n">protocol</span><span class="o">.</span>
+<span class="mi">9</span><span class="n">d23cb6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">22</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="o">*</span> <span class="n">Add</span> <span class="n">corporation</span> <span class="n">titles</span> <span class="n">to</span> <span class="n">character</span> <span class="n">sheet</span> <span class="p">(</span><span class="c1">#7)</span>
+<span class="mi">26</span><span class="n">c1673</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">19</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">eveseat</span><span class="o">/</span><span class="n">seat</span><span class="c1">#112 by using an advanced where to group the filter</span>
+<span class="mi">58</span><span class="n">cfc96</span>  <span class="mi">2016</span><span class="o">-</span><span class="mo">07</span><span class="o">-</span><span class="mi">18</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Add</span> <span class="n">the</span> <span class="sb">`seat:queue:clear-expired`</span> <span class="n">scheduled</span> <span class="n">command</span>
+</code></pre></div>
+
+
+<h3 id="1021">1.0.21<a class="headerlink" href="#1021" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">0ad3ccf  2016-07-23 Leon Jacobs (tag: 1.0.21) Version Bump</span>
+</code></pre></div>
+
+
+<h3 id="1022">1.0.22<a class="headerlink" href="#1022" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">a0a0c75  2016-07-27 Leon Jacobs (tag: 1.0.22) Version Bump</span>
+<span class="err">02ad71e  2016-07-27 Leon Jacobs Seed the expired job time to run every 6 hours</span>
+</code></pre></div>
+
+
+<h3 id="1023">1.0.23<a class="headerlink" href="#1023" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="mi">49</span><span class="n">bc082</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">14</span> <span class="n">Leon</span> <span class="nf">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">23</span><span class="p">)</span> <span class="n">Version</span> <span class="n">Bump</span>
+<span class="n">a199fa9</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">getCharacterAlliances</span> <span class="n">method</span>
+<span class="n">dfaa83a</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="kt">char</span> <span class="k">and</span> <span class="n">corp</span> <span class="n">minimum</span> <span class="n">mask</span> <span class="n">defaults</span>
+<span class="mi">4739</span><span class="n">b90</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">a</span> <span class="k">default</span> <span class="k">for</span> <span class="n">the</span> <span class="ss">`installed_sde`</span> <span class="n">setting</span>
+</code></pre></div>
+
+
+<h3 id="200-alpha1">2.0.0-alpha1<a class="headerlink" href="#200-alpha1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="mi">95</span><span class="n">f0453</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">26</span> <span class="n">Leon</span> <span class="nf">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">alpha1</span><span class="p">)</span> <span class="k">Update</span> <span class="n">composer</span> <span class="k">for</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="n">packages</span> <span class="k">and</span> <span class="n">version</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">alpha1</span>
+<span class="mi">3367168</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">more</span> <span class="n">data</span> <span class="n">sources</span> <span class="k">for</span> <span class="n">the</span> <span class="n">dashboard</span><span class="p">.</span>
+<span class="mi">0</span><span class="n">da12f3</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Allow</span> <span class="n">specifying</span> <span class="n">which</span> <span class="n">tags</span> <span class="k">to</span> <span class="n">exclude</span> <span class="k">when</span> <span class="n">cleaning</span> <span class="n">html</span><span class="p">.</span>
+<span class="n">e87cb20</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">member</span> <span class="n">tracking</span> <span class="n">counts</span> <span class="k">by</span> <span class="k">using</span> <span class="n">a</span> <span class="n">leftJoin</span><span class="p">.</span>
+<span class="n">f70db5f</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Dont</span> <span class="n">override</span> <span class="n">existing</span> <span class="n">schedules</span> <span class="k">when</span> <span class="n">seeding</span> <span class="n">the</span> <span class="k">database</span><span class="p">.</span>
+<span class="mi">2</span><span class="n">cbaf0f</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Allow</span> <span class="n">carbon</span> <span class="n">helper</span> <span class="k">to</span> <span class="n">be</span> <span class="n">called</span> <span class="n">without</span> <span class="n">an</span> <span class="n">argument</span><span class="p">.</span>
+<span class="mi">41</span><span class="n">a9b07</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">19</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="ss">`updateNote`</span> <span class="n">method</span><span class="p">.</span>
+<span class="n">a1c72d6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">19</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">Trait</span> <span class="n">that</span> <span class="n">allows</span> <span class="n">adding</span> <span class="n">notes</span> <span class="k">to</span> <span class="n">any</span> <span class="n">model</span><span class="p">.</span>
+<span class="n">dc81167</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Return</span> <span class="n">an</span> <span class="n">unresolved</span> <span class="n">query</span> <span class="k">for</span> <span class="n">datatables</span> <span class="k">to</span> <span class="n">work</span> <span class="k">with</span><span class="p">.</span>
+<span class="n">e3437ca</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Join</span> <span class="n">invTypes</span> <span class="k">to</span> <span class="n">get</span> <span class="n">the</span> <span class="n">contact</span> <span class="n">type</span>
+<span class="n">d804d7e</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">16</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Return</span> <span class="n">raw</span> <span class="n">query</span> <span class="n">builder</span> <span class="n">objects</span> <span class="k">for</span> <span class="k">use</span> <span class="k">with</span> <span class="n">datatables</span>
+<span class="mi">3</span><span class="n">b1cc16</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">15</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Prevent</span> <span class="n">overriding</span> <span class="n">existing</span> <span class="n">functions</span><span class="p">.</span>
+<span class="n">eca05dd</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">15</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Alloe</span> <span class="n">setting</span> <span class="n">settings</span> <span class="k">values</span> <span class="k">using</span> <span class="n">the</span> <span class="n">helper</span><span class="p">.</span>
+<span class="n">c62da72</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="n">stale</span> <span class="n">usages</span> <span class="n">of</span> <span class="n">the</span> <span class="n">old</span> <span class="ss">`Filterable`</span> <span class="n">trait</span><span class="p">.</span>
+<span class="mi">68</span><span class="n">e28c9</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Allow</span> <span class="k">for</span> <span class="n">repo</span> <span class="n">queries</span> <span class="k">to</span> <span class="k">return</span> <span class="n">unresolved</span><span class="p">.</span>
+<span class="mi">5</span><span class="n">ae8c91</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">flag</span> <span class="k">to</span> <span class="k">return</span> <span class="n">unresolved</span> <span class="n">queries</span> <span class="k">for</span> <span class="n">datatables</span><span class="p">.</span>
+<span class="n">bdb2ba0</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">08</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">Intel</span> <span class="n">repository</span>
+<span class="n">f65548e</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Code</span> <span class="n">formatting</span> <span class="n">fixes</span>
+<span class="mi">6</span><span class="n">ccfb97</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Paginate</span> <span class="n">market</span> <span class="n">orders</span>
+<span class="mi">720</span><span class="n">e5cb</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Use</span> <span class="nf">logger</span><span class="p">()</span> <span class="n">helper</span>
+<span class="mi">1</span><span class="n">ad9cfb</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="ss">`array_flatten()`</span> <span class="k">as</span> <span class="n">collections</span> <span class="n">are</span> <span class="n">returned</span>
+<span class="n">d8ddbb0</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="k">column</span> <span class="n">ambiguity</span>
+<span class="n">d1d46cf</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">30</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="k">return</span> <span class="n">type</span> <span class="k">as</span> <span class="n">it</span> <span class="n">can</span> <span class="n">be</span> <span class="no">null</span>
+<span class="n">d13d650</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Refactor</span> <span class="n">Corporation</span> <span class="n">repo</span> <span class="k">to</span> <span class="k">use</span> <span class="n">structured</span> <span class="n">classes</span>
+<span class="n">ab9f039</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Refactor</span> <span class="n">the</span> <span class="k">Character</span> <span class="n">repository</span> <span class="k">to</span> <span class="k">use</span> <span class="n">seperate</span> <span class="n">classes</span>
+<span class="mi">3</span><span class="n">f7a1f9</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Return</span> <span class="n">a</span> <span class="n">single</span> <span class="n">value</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">array</span>
+<span class="mi">6</span><span class="n">b0aa6c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="k">usage</span> <span class="n">of</span> <span class="ss">`collect()`</span><span class="p">.</span> <span class="n">Collections</span> <span class="n">are</span> <span class="n">returned</span> <span class="k">by</span> <span class="k">default</span>
+<span class="mi">7784321</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="n">PHP</span> <span class="o">&amp;</span> <span class="n">Laravel</span> <span class="n">dependencies</span>
+<span class="mi">1</span><span class="n">de059b</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Log</span> <span class="n">queries</span> <span class="n">based</span> <span class="k">on</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="ss">`DB_DEBUG`</span>
+<span class="n">c5ac762</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">21</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Revert</span> <span class="n">groupBy</span> <span class="n">changes</span> <span class="n">introduced</span> <span class="k">in</span> <span class="mi">982</span><span class="n">b8661</span>
+<span class="n">ee0ff98</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">21</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Upgrade</span> <span class="k">to</span> <span class="n">coduo</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">humanizer</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">869</span><span class="n">f330</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">21</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">namespace</span> <span class="k">change</span> <span class="k">for</span> <span class="n">humanizer</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span>
+<span class="mi">982</span><span class="n">b866</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">21</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">strict</span> <span class="n">mode</span> <span class="n">groupBy</span> <span class="n">constraints</span>
+<span class="mi">3</span><span class="n">f1f2c5</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">21</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Make</span> <span class="n">the</span> <span class="n">query</span> <span class="n">debugger</span> <span class="n">listen</span> <span class="k">on</span> <span class="n">the</span> <span class="n">DB</span> <span class="n">facade</span> <span class="n">directly</span><span class="p">.</span>
+<span class="mi">0</span><span class="n">ff8a45</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">Job</span> <span class="k">to</span> <span class="k">match</span> <span class="n">L5</span><span class="p">.</span><span class="mi">3</span> <span class="n">changes</span>
+<span class="n">ac59839</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Rename</span> <span class="nf">lists</span><span class="p">()</span> <span class="k">to</span> <span class="nf">pluck</span><span class="p">()</span>
+<span class="mi">5</span><span class="n">dc3ac7</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">15</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Get</span> <span class="n">the</span> <span class="n">value</span> <span class="k">with</span> <span class="ss">`value()`</span> <span class="n">instead</span> <span class="n">of</span> <span class="ss">`pluck()`</span>
+</code></pre></div>
+
+
+<h3 id="200-alpha2">2.0.0-alpha2<a class="headerlink" href="#200-alpha2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">69ad918  2016-11-26 Leon Jacobs (tag: 2.0.0-alpha2) Drop minimum stability, add prefer-stable and bump to 2.0.0-alpha2.</span>
+</code></pre></div>
+
+
+<h3 id="200">2.0.0<a class="headerlink" href="#200" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">b3fdb7a  2016-12-08 Leon Jacobs (tag: 2.0.0) Version Bump! 2.0.0! ⚡️</span>
+<span class="err">cdde3d0  2016-12-08 Leon Jacobs Format and style fixes.</span>
+<span class="err">95eee16  2016-11-30 Leon Jacobs Allow longer values in the global settings.</span>
+<span class="err">b64e55b  2016-11-29 Leon Jacobs Add default for api_constraint</span>
+<span class="err">77822f5  2016-11-29 Leon Jacobs Formatting and style fixes.</span>
+<span class="err">ae73811  2016-11-28 Leon Jacobs Add methods for searching.</span>
+<span class="err">dcc872f  2016-11-28 Leon Jacobs Return a unresolved query.</span>
+<span class="err">ac10ed1  2016-11-28 Leon Jacobs Rename getAllCharactersWithAffiliations method.</span>
+<span class="err">0277069  2016-11-27 Leon Jacobs Move character skills graph info from the Stats to Character repo.</span>
+<span class="err">7a2ca83  2016-11-27 Loïc LEUILLIOT add skills related chart (#10)</span>
+<span class="err">5f2f09f  2016-11-26 AsherST Fix where clause for PI (#11)</span>
+</code></pre></div>
+
+
+<h3 id="201">2.0.1<a class="headerlink" href="#201" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e51c35d  2016-12-11 Leon Jacobs (tag: 2.0.1) Version Bump</span>
+<span class="err">2209e71  2016-12-11 Leon Jacobs Remove return type as it can be null too</span>
+<span class="err">eb58671  2016-12-11 Leon Jacobs Fix member tracking query to return correct key statuses.</span>
+<span class="err">22f1d42  2016-12-11 Leon Jacobs Add default value for require_activation</span>
+</code></pre></div>
+
+
+<h3 id="202">2.0.2<a class="headerlink" href="#202" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">de658a8  2016-12-15 Leon Jacobs (tag: 2.0.2) Version Bump</span>
+<span class="err">aaec7d7  2016-12-15 Leon Jacobs Formatting fixes.</span>
+<span class="err">0bde264  2016-12-15 Loïc LEUILLIOT implement a custom method dedicated to search for ApiKey (#12)</span>
+<span class="err">8203f69  2016-12-14 Leon Jacobs Add function to parse evemail threads.</span>
+</code></pre></div>
+
+
+<h3 id="203">2.0.3<a class="headerlink" href="#203" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">33be7aa  2016-12-16 Leon Jacobs (tag: 2.0.3) Version Bump</span>
+<span class="err">17fcaec  2016-12-16 Leon Jacobs Add new mail_threads option</span>
+<span class="err">d966f59  2016-12-16 Leon Jacobs Add method to remove job tracking items</span>
+</code></pre></div>
+
+
+<h3 id="204">2.0.4<a class="headerlink" href="#204" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">9e68e86  2016-12-22 Leon Jacobs (tag: 2.0.4) Version Bump</span>
+<span class="err">9041297  2016-12-22 Leon Jacobs Dont prefix cache keys with the session_id</span>
+</code></pre></div>
+
+
+<h3 id="205">2.0.5<a class="headerlink" href="#205" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">fc82256  2016-12-22 Leon Jacobs (tag: 2.0.5) Version Bump</span>
+<span class="err">1a56751  2016-12-22 Leon Jacobs Only prefix user keys with the session_id</span>
+</code></pre></div>
+
+
+<h3 id="206">2.0.6<a class="headerlink" href="#206" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">318fc64  2016-12-28 Leon Jacobs (tag: 2.0.6) Version Bump</span>
+<span class="err">637e566  2016-12-26 Leon Jacobs Add methods to get contract items</span>
+<span class="err">bc09a37  2016-12-26 Leon Jacobs Formatting and code style fixes</span>
+<span class="err">84dfae6  2016-12-26 freedenizen Add assetContents collection for Character Assets view (#14)</span>
+<span class="err">2efc1ff  2016-12-26 Loïc LEUILLIOT including level in skill coverage chart (#13)</span>
+</code></pre></div>
+
+
+<h3 id="207">2.0.7<a class="headerlink" href="#207" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">462fd5c  2017-01-12 Leon Jacobs (tag: 2.0.7) Version Bump</span>
+<span class="err">0be2e39  2017-01-12 freedenizen Character assets (#16)</span>
+<span class="err">44c6db5  2017-01-04 Leon Jacobs Update styleci config</span>
+<span class="err">e36d874  2017-01-02 Leon Jacobs Apply fixes from StyleCI (#15)</span>
+<span class="err">2ecf750  2017-01-02 Leon Jacobs Add StyleCI configuration &amp; badge</span>
+<span class="err">4a232d1  2017-01-01 Leon Jacobs Style fixes</span>
+</code></pre></div>
+
+
+<h3 id="208">2.0.8<a class="headerlink" href="#208" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">f0074be</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">22</span> <span class="n">Leon</span> <span class="nf">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">)</span> <span class="n">Version</span> <span class="n">Bump</span>
+<span class="mi">9144305</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">22</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Apply</span> <span class="n">fixes</span> <span class="k">from</span> <span class="nf">StyleCI</span> <span class="p">(</span><span class="c1">#17)</span>
+<span class="n">f29b680</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">22</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="ss">`childContentCount`</span> <span class="n">field</span> <span class="k">for</span> <span class="n">assets</span>
+<span class="mi">42</span><span class="n">adef9</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">codeclimate</span> <span class="n">configuration</span>
+</code></pre></div>
+
+
+<h3 id="209">2.0.9<a class="headerlink" href="#209" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">1095543  2017-04-17 Leon Jacobs (tag: 2.0.9) Version Bump</span>
+<span class="err">dc46c73  2017-02-19 moe-alabel Modified cron statements to proper format. Changed from 6 positions to 5 (#18)</span>
+</code></pre></div>
+
+
+<h3 id="2010">2.0.10<a class="headerlink" href="#2010" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">3feccc6  2017-07-02 Leon Jacobs (tag: 2.0.10) Version Bump</span>
+<span class="err">eb02e76  2017-07-02 Loïc LEUILLIOT avoid null exception on assetlist_locations for starbases trait (#22)</span>
+<span class="err">4358497  2017-07-02 BenH    Added support for the &#39;Render&#39; type (#23)</span>
+</code></pre></div>
+
+
+<h3 id="2011">2.0.11<a class="headerlink" href="#2011" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">4658230  2017-08-12 Leon Jacobs (tag: 2.0.11, origin/master, origin/HEAD, master) Version Bump</span>
+<span class="err">d1bc5b3  2017-08-12 Leon Jacobs Remove an unused variable and style fixes.</span>
+<span class="err">654e4da  2017-08-12 Loïc LEUILLIOT add ACL filters on dashboard stats (#25)</span>
+<span class="err">a65f4a4  2017-08-12 Leon Jacobs Style fixes</span>
+<span class="err">f4e1c22  2017-08-12 Loïc LEUILLIOT optimise top mail query by dropping join table and exploit getAffiliationMap in order to retrieve the user character IDs (#24)</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015 - 2020 Leon Jacobs
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/eveseat/seat" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../js/extra_tabs.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2143 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Simple EVE Api Tool Documentation">
+      
+      
+        <link rel="canonical" href="https://eveseat.github.io/docs/changelogs/web/">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
+    
+    
+      
+        <title>Web - SeAT Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.89dc9fe3.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecd4686e.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/extra_typo.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tabs.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-119530306-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#web-change-logs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://eveseat.github.io/docs" title="SeAT Documentation" class="md-header-nav__button md-logo" aria-label="SeAT Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SeAT Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Web
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eveseat/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://eveseat.github.io/docs" title="SeAT Documentation" class="md-nav__button md-logo" aria-label="SeAT Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    SeAT Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eveseat/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/requirements/" title="Requirements" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/basic_installation/" title="Basic Installation" class="md-nav__link">
+      Basic Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/docker_installation/" title="Docker Installation" class="md-nav__link">
+      Docker Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Manual Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Manual Installation" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Manual Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/centos/" title="CentOS" class="md-nav__link">
+      CentOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/debian/" title="Debian" class="md-nav__link">
+      Debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/ubuntu/" title="Ubuntu" class="md-nav__link">
+      Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/generic/" title="Generic" class="md-nav__link">
+      Generic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Webservers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Webservers" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Webservers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/nginx/" title="Nginx" class="md-nav__link">
+      Nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/traefik/" title="Traefik" class="md-nav__link">
+      Traefik
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/caddy/" title="Caddy" class="md-nav__link">
+      Caddy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/apache/" title="Apache" class="md-nav__link">
+      Apache
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Upgrading
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Upgrading" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Upgrading
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/from_seat_2_0/" title="From SeAT 2.0" class="md-nav__link">
+      From SeAT 2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/from_seat_1_0/" title="From SeAT 1.0" class="md-nav__link">
+      From SeAT 1.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Configuration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/esi_configuration/" title="ESI Configuration" class="md-nav__link">
+      ESI Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Email Setup
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Email Setup" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Email Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/email_setup/mailgun/" title="Mailgun" class="md-nav__link">
+      Mailgun
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/email_setup/gmail/" title="GMail" class="md-nav__link">
+      GMail
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/env_file_reference/" title="Env File Reference" class="md-nav__link">
+      Env File Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/eve_administrative_contact/" title="EVE Administrative Contact" class="md-nav__link">
+      EVE Administrative Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/configuration_overload/" title="Configuration Overload" class="md-nav__link">
+      Configuration Overload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/sde_overload/" title="SDE Overload" class="md-nav__link">
+      SDE Overload
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Admin Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Admin Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Admin Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/docker_admin/" title="Docker Admin" class="md-nav__link">
+      Docker Admin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/role_based_access_control/" title="Role Based Access Control" class="md-nav__link">
+      Role Based Access Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/understanding_tracking/" title="Understanding Tracking" class="md-nav__link">
+      Understanding Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/scaled_deployments/" title="Scaled Deployments" class="md-nav__link">
+      Scaled Deployments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Developer Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developer Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Developer Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/developer_installation/" title="Developer Installation" class="md-nav__link">
+      Developer Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/general_guide/" title="General Guide" class="md-nav__link">
+      General Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/job_queue_flow/" title="Job Queue Flow" class="md-nav__link">
+      Job Queue Flow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/development_tips/" title="Development Tips" class="md-nav__link">
+      Development Tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/core_package_breakdown/" title="Core Package Breakdown" class="md-nav__link">
+      Core Package Breakdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/package_development/" title="Package Development" class="md-nav__link">
+      Package Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/seat_api/" title="SeAT API" class="md-nav__link">
+      SeAT API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../styling/" title="Styling" class="md-nav__link">
+      Styling
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../community_packages/" title="Community Packages" class="md-nav__link">
+      Community Packages
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      About
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="About" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/contact/" title="Contact" class="md-nav__link">
+      Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/reporting_bugs/" title="Reporting Bugs" class="md-nav__link">
+      Reporting Bugs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-pre-alpha" class="md-nav__link">
+    1.0-pre-alpha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    1.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    1.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    1.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    1.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104" class="md-nav__link">
+    1.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    1.0.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106" class="md-nav__link">
+    1.0.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" class="md-nav__link">
+    1.0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108" class="md-nav__link">
+    1.0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109" class="md-nav__link">
+    1.0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010" class="md-nav__link">
+    1.0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1011" class="md-nav__link">
+    1.0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1012" class="md-nav__link">
+    1.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1013" class="md-nav__link">
+    1.0.13
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1014" class="md-nav__link">
+    1.0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1015" class="md-nav__link">
+    1.0.15
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1016" class="md-nav__link">
+    1.0.16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1017" class="md-nav__link">
+    1.0.17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1018" class="md-nav__link">
+    1.0.18
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1019" class="md-nav__link">
+    1.0.19
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1020" class="md-nav__link">
+    1.0.20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1021" class="md-nav__link">
+    1.0.21
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1022" class="md-nav__link">
+    1.0.22
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1023" class="md-nav__link">
+    1.0.23
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1024" class="md-nav__link">
+    1.0.24
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1025" class="md-nav__link">
+    1.0.25
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1026" class="md-nav__link">
+    1.0.26
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1027" class="md-nav__link">
+    1.0.27
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1028" class="md-nav__link">
+    1.0.28
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1029" class="md-nav__link">
+    1.0.29
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1030" class="md-nav__link">
+    1.0.30
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1031" class="md-nav__link">
+    1.0.31
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha1" class="md-nav__link">
+    2.0.0-alpha1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha2" class="md-nav__link">
+    2.0.0-alpha2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    2.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    2.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202" class="md-nav__link">
+    2.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#203" class="md-nav__link">
+    2.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204" class="md-nav__link">
+    2.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#205" class="md-nav__link">
+    2.0.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#206" class="md-nav__link">
+    2.0.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#207" class="md-nav__link">
+    2.0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#208" class="md-nav__link">
+    2.0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#209" class="md-nav__link">
+    2.0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2010" class="md-nav__link">
+    2.0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2011" class="md-nav__link">
+    2.0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2012" class="md-nav__link">
+    2.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2013" class="md-nav__link">
+    2.0.13
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2014" class="md-nav__link">
+    2.0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2015" class="md-nav__link">
+    2.0.15
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2016" class="md-nav__link">
+    2.0.16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2017" class="md-nav__link">
+    2.0.17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2018" class="md-nav__link">
+    2.0.18
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/eveseat/docs/edit/master/docs/changelogs/web.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
+<h1 id="web-change-logs">web change logs<a class="headerlink" href="#web-change-logs" title="Permanent link">&para;</a></h1>
+<p>Generated with: <code>git log --pretty=format:"%h%&gt;(12)%ad %&lt;(7)%aN%d %s" --date=short</code></p>
+<h3 id="10-pre-alpha">1.0-pre-alpha<a class="headerlink" href="#10-pre-alpha" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">6332cd7  2015-11-27 Leon Jacobs (tag: 1.0-pre-alpha) Update README</span>
+<span class="err">a48340a  2015-11-27 Leon Jacobs Login using names instead of emails</span>
+<span class="err">2dfdc27  2015-11-27 Leon Jacobs Add ability to view corp wallet transactions</span>
+<span class="err">06c4741  2015-11-27 Leon Jacobs Add ability to view corp wallet journals</span>
+<span class="err">97547a7  2015-11-27 Leon Jacobs Add ability to view corp standings</span>
+<span class="err">1a825e0  2015-11-27 Leon Jacobs Add ability to view corp market orders</span>
+<span class="err">bab5d6a  2015-11-27 Leon Jacobs Add ability to view corp killmails</span>
+<span class="err">26923cc  2015-11-27 Leon Jacobs Add ability to view corporation industry jobs</span>
+<span class="err">fc43803  2015-11-27 Leon Jacobs Add ability to view corporation contracts</span>
+<span class="err">a386881  2015-11-27 Leon Jacobs Add ability to view corp contacts</span>
+<span class="err">110b142  2015-11-27 Leon Jacobs Add ability to view corporation assets</span>
+<span class="err">2b9dd85  2015-11-27 Leon Jacobs Add ability to view corp summary</span>
+<span class="err">0bf5bdc  2015-11-26 Leon Jacobs First work on corporation views.</span>
+<span class="err">5114d4f  2015-11-26 Leon Jacobs Resolve a trait method conflict</span>
+<span class="err">5eaffdc  2015-11-21 Leon Jacobs Add ability to mass import keys via CSV files</span>
+<span class="err">17feb08  2015-11-21 Leon Jacobs Add ability to view character standings</span>
+<span class="err">797c9f0  2015-11-21 Leon Jacobs Add ability to view character research info</span>
+<span class="err">771ee34  2015-11-21 Leon Jacobs Add ability to view character PI</span>
+<span class="err">0fcb7de  2015-11-21 Leon Jacobs Add ability to view character market orders</span>
+<span class="err">a6b7ac6  2015-11-20 Leon Jacobs Add ability to view character industry</span>
+<span class="err">c020c36  2015-11-20 Leon Jacobs Small UI refactor to make it cleaner</span>
+<span class="err">0d5e18a  2015-11-20 Leon Jacobs Add character contract view</span>
+<span class="err">f36e34b  2015-11-20 Leon Jacobs Add ability to view character killmails</span>
+<span class="err">45e8dd5  2015-11-20 Leon Jacobs Link to character details</span>
+<span class="err">08d1d48  2015-10-30 Leon Jacobs Add character contacts view</span>
+<span class="err">dc3a396  2015-10-30 Leon Jacobs Add character calendar view</span>
+<span class="err">085368f  2015-10-30 Leon Jacobs Add character notifications view</span>
+<span class="err">04ca0ee  2015-10-30 Leon Jacobs Add filter rules.</span>
+<span class="err">ccc5ad2  2015-10-30 Leon Jacobs Add Character Assets View</span>
+<span class="err">c748d29  2015-10-29 Leon Jacobs Add table-responsive</span>
+<span class="err">9aaa7ae  2015-10-29 Leon Jacobs Add Character Mail View</span>
+<span class="err">f046272  2015-10-29 Leon Jacobs Add Character Wallet Transaction View</span>
+<span class="err">1ae69e0  2015-10-29 Leon Jacobs Add Character Wallet Journal View</span>
+<span class="err">814a95d  2015-10-29 Leon Jacobs Rename method from EveRepository</span>
+<span class="err">5d9cfc1  2015-10-28 Leon Jacobs Add Implants, Jump Fatigue and Clone info</span>
+<span class="err">ac83d39  2015-10-28 Leon Jacobs Minor formatting changes</span>
+<span class="err">3631b89  2015-10-28 Leon Jacobs Re-arrange character details layout</span>
+<span class="err">e23a153  2015-10-27 Leon Jacobs Add more character sheet info and shuffle a few things around</span>
+<span class="err">c414bb2  2015-10-27 Leon Jacobs Create a base view for character detail views</span>
+<span class="err">d3fc448  2015-10-27 Leon Jacobs Add Character Skills view</span>
+<span class="err">51caf72  2015-10-09 Leon Jacobs Add Security logging and viewing abilities</span>
+<span class="err">7debd56  2015-10-09 Leon Jacobs Start the Character Viewer</span>
+<span class="err">5bfbed0  2015-10-09 Leon Jacobs Small responsive fixes</span>
+<span class="err">4cf03ed  2015-10-08 Leon Jacobs Add All Characters View</span>
+<span class="err">51ccf46  2015-10-08 Leon Jacobs Add hasAny()</span>
+<span class="err">12e05de  2015-10-07 Leon Jacobs Split permissions into categories</span>
+<span class="err">50a68ab  2015-10-06 Leon Jacobs Add a view into the Job Queue as well as some management</span>
+<span class="err">0da342b  2015-10-06 Leon Jacobs Add live queue status updates</span>
+<span class="err">b9df4c4  2015-10-06 Leon Jacobs Fix cases where keys with missing info would throw errors</span>
+<span class="err">9faffab  2015-10-06 Leon Jacobs Remove usage of the Redirect Facade</span>
+<span class="err">2250508  2015-10-05 Leon Jacobs Add ability to manually start a job update</span>
+<span class="err">3e34b3e  2015-10-05 Leon Jacobs Add key detail viewer and introduce the keybouncer</span>
+<span class="err">85bf567  2015-10-05 Leon Jacobs Add ability ti list and delete API keys</span>
+<span class="err">2fe3d76  2015-10-04 Leon Jacobs Add lazy image loading support</span>
+<span class="err">ee21c49  2015-10-04 Leon Jacobs Style fixes</span>
+<span class="err">1de991a  2015-10-04 Leon Jacobs Add ability to add new Api Keys</span>
+<span class="err">358ba7f  2015-10-04 Leon Jacobs Make sidebar permissions aware</span>
+<span class="err">41190e6  2015-10-02 Leon Jacobs Introduce the Bouncer and hes Clipboard 🚪</span>
+<span class="err">c2edc6b  2015-10-02 Leon Jacobs Use auth() helper instead of Auth Facade</span>
+<span class="err">2a864dc  2015-10-02 Leon Jacobs Fix some inconsistency with edit/updater user lang</span>
+<span class="err">e473bba  2015-10-02 Leon Jacobs Swap input for has to read better</span>
+<span class="err">5e65509  2015-10-02 Leon Jacobs Allow for users to be quick added</span>
+<span class="err">89ca4e1  2015-10-02 Leon Jacobs Allow for the account status to be filled</span>
+<span class="err">05e6019  2015-10-02 Leon Jacobs Resize grid to match other configuration views</span>
+<span class="err">fdeb2cc  2015-10-02 Leon Jacobs Rename menu entry to match page title</span>
+<span class="err">7a03e34  2015-10-02 Leon Jacobs Complete the impersonation feature</span>
+<span class="err">6195979  2015-10-02 Leon Jacobs Add ability to delete users</span>
+<span class="err">0675ef9  2015-10-02 Leon Jacobs Cleanup when a user is deleted</span>
+<span class="err">4c58659  2015-10-02 Leon Jacobs Allow for users to be modified</span>
+<span class="err">a3f1882  2015-10-01 Leon Jacobs Add a basic summary of user roles and affiliations</span>
+<span class="err">f03f872  2015-09-30 Leon Jacobs Localize flash messages on perm/role changes</span>
+<span class="err">679b020  2015-09-30 Leon Jacobs Fix typo in affiliation form request validator</span>
+<span class="err">2e656a8  2015-09-30 Leon Jacobs First iteration of Acl methods and web structuring.</span>
+<span class="err">e8c4343  2015-09-29 Leon Jacobs Highlight submenu items based on URL match</span>
+<span class="err">b6cd2b9  2015-09-29 Leon Jacobs Have the sidebar honor the Locale</span>
+<span class="err">1f91ef0  2015-09-29 Leon Jacobs Add view composer to build the sidebar menu</span>
+<span class="err">3425769  2015-09-28 Leon Jacobs Add a User view composer</span>
+<span class="err">3e72326  2015-09-28 Leon Jacobs Restructure Service Provider</span>
+<span class="err">4aa96f5  2015-09-27 Leon Jacobs Fix duplicate &#39;reset&#39; translation key</span>
+<span class="err">1160deb  2015-09-27 Leon Jacobs Use class property</span>
+<span class="err">22c7747  2015-09-27 Leon Jacobs Add password reset functionality</span>
+<span class="err">9377f67  2015-09-27 Leon Jacobs Add README</span>
+<span class="err">f16a71d  2015-09-27 Leon Jacobs Start web interface</span>
+<span class="err">3f15794  2015-09-24 Leon Jacobs Initial commit</span>
+</code></pre></div>
+
+
+<h3 id="100">1.0.0<a class="headerlink" href="#100" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e885f07  2015-11-28 Leon Jacobs (tag: 1.0.0) Style fixes and version Bump</span>
+<span class="err">fddc5ba  2015-11-28 Leon Jacobs Add SeAT Settings Page with registration toggle</span>
+<span class="err">30b2b9c  2015-11-28 Leon Jacobs Add more settings options</span>
+<span class="err">bb6e8ed  2015-11-28 Leon Jacobs Add ability to change SeAT theme.</span>
+<span class="err">8dbb713  2015-11-28 Leon Jacobs Read skin ccs filename from settings()</span>
+<span class="err">67d823c  2015-11-28 Leon Jacobs Read some values from settings</span>
+<span class="err">91872a1  2015-11-27 Leon Jacobs Remove unused HTML and fix brand route</span>
+<span class="err">3ec66f3  2015-11-27 Leon Jacobs Reduce icon size and add corp icons</span>
+<span class="err">e78c62f  2015-11-27 Leon Jacobs Add more complete corp security views</span>
+<span class="err">13f6c9d  2015-11-27 Leon Jacobs Add ability to view corp member tracking</span>
+</code></pre></div>
+
+
+<h3 id="101">1.0.1<a class="headerlink" href="#101" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">4598815  2015-12-01 Leon Jacobs (tag: 1.0.1) Version Bump</span>
+<span class="err">2c683ba  2015-12-01 Leon Jacobs Dont force a package to have a sub-menu</span>
+<span class="err">6c13e32  2015-12-01 Leon Jacobs Resolve menu routes in the sidebar view.</span>
+<span class="err">e8f3237  2015-11-30 Leon Jacobs Add api version display</span>
+<span class="err">0f6d4ec  2015-11-30 Leon Jacobs First pass in allowing packages to add menu items</span>
+<span class="err">fe117ce  2015-11-30 Leon Jacobs Add hasRole() method</span>
+<span class="err">be056a9  2015-11-30 Leon Jacobs Fix #2</span>
+</code></pre></div>
+
+
+<h3 id="102">1.0.2<a class="headerlink" href="#102" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">7fcac57  2015-12-02 Leon Jacobs (tag: 1.0.2) Version Bump</span>
+<span class="err">020c885  2015-12-02 Leon Jacobs Add notifications version</span>
+<span class="err">f9fdaf6  2015-12-02 Leon Jacobs Dont force packages to set a permission</span>
+<span class="err">5d1bb8c  2015-12-02 Leon Jacobs Add email notifications setting and new email templates</span>
+<span class="err">4bade0d  2015-12-02 Leon Jacobs Auto update copyright year</span>
+<span class="err">9eba303  2015-12-02 Leon Jacobs Add WebUI to manage schedules</span>
+</code></pre></div>
+
+
+<h3 id="103">1.0.3<a class="headerlink" href="#103" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">bc8e6eb  2015-12-04 Leon Jacobs (tag: 1.0.3) Start something for a dashboard</span>
+<span class="err">0238e32  2015-12-04 Leon Jacobs Update README.md</span>
+<span class="err">73d415d  2015-12-04 Leon Jacobs Add optional Google Two-Factor TOTP support.</span>
+<span class="err">84723ff  2015-12-03 Leon Jacobs Merge pull request #3 from Cynabal/patch-1</span>
+<span class="err">2d98ead  2015-12-03 Cynabal Update add.blade.php</span>
+</code></pre></div>
+
+
+<h3 id="104">1.0.4<a class="headerlink" href="#104" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">4aab9b8  2015-12-05 Leon Jacobs (tag: 1.0.4) Version Bump</span>
+</code></pre></div>
+
+
+<h3 id="105">1.0.5<a class="headerlink" href="#105" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">df6ddae  2015-12-13 Leon Jacobs (tag: 1.0.5) Version Bump</span>
+<span class="err">14bc397  2015-12-13 Leon Jacobs Add ability to set an admin contact</span>
+<span class="err">5e6498b  2015-12-12 Leon Jacobs Add links to external services</span>
+<span class="err">f819124  2015-12-12 Leon Jacobs Show output of jobs</span>
+<span class="err">070c232  2015-12-12 Leon Jacobs Show eveapi errors status</span>
+<span class="err">80775e2  2015-12-11 Leon Jacobs Allows superusers to transfer keys to other owners</span>
+</code></pre></div>
+
+
+<h3 id="106">1.0.6<a class="headerlink" href="#106" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">2042098  2015-12-16 Leon Jacobs (tag: 1.0.6) Version Bump</span>
+<span class="err">83a7ea8  2015-12-16 Leon Jacobs Add Afrikaans language support</span>
+<span class="err">0039045  2015-12-16 Leon Jacobs Add ability to select a preferred language</span>
+<span class="err">30a71e6  2015-12-16 Leon Jacobs Update langauge strings</span>
+<span class="err">2956a15  2015-12-15 Leon Jacobs Resolve contract issuerID&#39;s to names</span>
+<span class="err">36ea925  2015-12-15 Leon Jacobs Apply number() to a few values</span>
+<span class="err">40e5c24  2015-12-15 Leon Jacobs Add ability to view profile login/logout history</span>
+<span class="err">a8e93d7  2015-12-15 Leon Jacobs Add for user password resets</span>
+<span class="err">81682c4  2015-12-15 Leon Jacobs Add recipient info into the mail timeline</span>
+<span class="err">cc141c8  2015-12-15 Leon Jacobs Add id-to-name helper</span>
+<span class="err">6999007  2015-12-15 Leon Jacobs Add X-CSRF Token for ajax calls</span>
+<span class="err">6915fec  2015-12-15 Leon Jacobs Add the mail timeline view</span>
+<span class="err">5ade565  2015-12-14 Leon Jacobs Add ability to view character email</span>
+</code></pre></div>
+
+
+<h3 id="107">1.0.7<a class="headerlink" href="#107" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">660b6fa  2015-12-17 Leon Jacobs (tag: 1.0.7) Version Bump</span>
+<span class="err">b65aa7e  2015-12-17 Leon Jacobs Remove URI scheme</span>
+<span class="err">639b3fb  2015-12-17 Leon Jacobs Add missing language definition for view</span>
+</code></pre></div>
+
+
+<h3 id="108">1.0.8<a class="headerlink" href="#108" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">0ece0ce  2015-12-17 Leon Jacobs (tag: 1.0.8) Version Bump</span>
+<span class="err">616067c  2015-12-17 Leon Jacobs Check if we have data before attempting to display</span>
+<span class="err">99c14a3  2015-12-17 Leon Jacobs Fix eveseat/seat#10</span>
+</code></pre></div>
+
+
+<h3 id="109">1.0.9<a class="headerlink" href="#109" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">9e4cd79  2015-12-17 Leon Jacobs (tag: 1.0.9) Add account info check and Version Bump</span>
+<span class="err">bfaabe2  2015-12-17 Leon Jacobs Merge pull request #4 from freedenizen/master</span>
+<span class="err">d802b98  2015-12-17 Asher Schaffer add updated_at timestamps to Character and Corporation Sheet summary</span>
+</code></pre></div>
+
+
+<h3 id="1010">1.0.10<a class="headerlink" href="#1010" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">5aebf1e  2015-12-18 Leon Jacobs (tag: 1.0.10) Allow French to be chosen and Version Bump</span>
+<span class="err">dae1719  2015-12-18 Leon Jacobs Merge pull request #5 from warlof/french</span>
+<span class="err">6e827ae  2015-12-17 elfaus  Translate SeAT in french according to 1.0.9</span>
+</code></pre></div>
+
+
+<h3 id="1011">1.0.11<a class="headerlink" href="#1011" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">ca67d0a  2015-12-20 Leon Jacobs (tag: 1.0.11) Version Bump</span>
+<span class="err">78da260  2015-12-20 Leon Jacobs Add ability to view corporation bookmarks</span>
+<span class="err">eda1260  2015-12-19 Leon Jacobs Add ability to view character bookmarks</span>
+<span class="err">8e1285e  2015-12-18 Leon Jacobs Add ability to view character channels</span>
+</code></pre></div>
+
+
+<h3 id="1012">1.0.12<a class="headerlink" href="#1012" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">7bdbf10  2015-12-24 Leon Jacobs (tag: 1.0.12) Version Bump</span>
+<span class="err">6c365ad  2015-12-24 Leon Jacobs Specify versions with ~</span>
+<span class="err">3f604e2  2015-12-24 Leon Jacobs Merge pull request #11 from warlof/french</span>
+<span class="err">c1f4657  2015-12-24 elfaus  add new translations according to recent commits (for 1.0.12)</span>
+<span class="err">ed485b3  2015-12-24 Leon Jacobs Move strontium usage to its own string for easier translation</span>
+<span class="err">64a6f86  2015-12-24 Leon Jacobs Take into account bonusses silo/coupling array capacities</span>
+<span class="err">488fd3b  2015-12-24 Leon Jacobs Merge pull request #8 from warlof/unknown-item</span>
+<span class="err">cd66a8a  2015-12-24 Leon Jacobs Add Starbase details views</span>
+<span class="err">f9dc521  2015-12-24 elfaus  fix issue #9</span>
+<span class="err">9f74d1c  2015-12-24 Leon Jacobs Add more details about starbases</span>
+<span class="err">7e67371  2015-12-23 Leon Jacobs First pass at adding starbase views</span>
+<span class="err">9496188  2015-12-21 Leon Jacobs Merge pull request #6 from warlof/french</span>
+<span class="err">2491e69  2015-12-21 elfaus  Translate SeAT in french according to 1.0.11</span>
+<span class="err">f5fa4e3  2015-12-21 Leon Jacobs Show timestampts and paginate wallet info</span>
+<span class="err">c6b4311  2015-12-21 Leon Jacobs Fix eveseat/seat#15</span>
+</code></pre></div>
+
+
+<h3 id="1013">1.0.13<a class="headerlink" href="#1013" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">936e8b8  2015-12-24 Leon Jacobs (tag: 1.0.13) Fix a assets check, add missing string and Version Bump</span>
+</code></pre></div>
+
+
+<h3 id="1014">1.0.14<a class="headerlink" href="#1014" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">3f8587c  2015-12-26 Leon Jacobs (tag: 1.0.14) Version Bump</span>
+<span class="err">14d87b4  2015-12-26 Leon Jacobs Merge pull request #13 from warlof/ticket5</span>
+<span class="err">d412b7e  2015-12-26 Leon Jacobs Excluse Towers themselves from module views</span>
+<span class="err">98a8e19  2015-12-26 Leon Jacobs Use a macro for progressbar generation</span>
+<span class="err">c0e9ce3  2015-12-26 Leon Jacobs Remove unused variables</span>
+<span class="err">22932b4  2015-12-26 Leon Jacobs Refactor Starbase views mostly for performance reasons</span>
+<span class="err">0cefaac  2015-12-25 elfaus  fix issue #5 about labels display on neutral and negative standing</span>
+</code></pre></div>
+
+
+<h3 id="1015">1.0.15<a class="headerlink" href="#1015" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">bbede7b  2015-12-27 Leon Jacobs (tag: 1.0.15) Version Bump</span>
+<span class="err">63f308a  2015-12-27 Leon Jacobs Load starbase modules via Ajax calls</span>
+<span class="err">c0f48df  2015-12-27 Leon Jacobs Display page render time</span>
+</code></pre></div>
+
+
+<h3 id="1016">1.0.16<a class="headerlink" href="#1016" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">075784c  2015-12-28 Leon Jacobs (tag: 1.0.16) Version Bump</span>
+<span class="err">b688c4f  2015-12-28 Leon Jacobs Add planet type icons</span>
+<span class="err">54ccdec  2015-12-28 Leon Jacobs Add corporation Pocos view</span>
+</code></pre></div>
+
+
+<h3 id="1017">1.0.17<a class="headerlink" href="#1017" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">ec9d5c8  2015-12-29 Leon Jacobs (tag: 1.0.17) Version Bump</span>
+<span class="err">aaaac36  2015-12-29 Leon Jacobs Fix eveseat/seat#29</span>
+<span class="err">6de7e1e  2015-12-29 Leon Jacobs Add Datatables for tables.</span>
+</code></pre></div>
+
+
+<h3 id="1018">1.0.18<a class="headerlink" href="#1018" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">69239bf  2016-01-03 Leon Jacobs (tag: 1.0.18) Version Bump</span>
+<span class="err">33470ce  2016-01-03 Leon Jacobs Allow packages to hook into corporation menus</span>
+<span class="err">24c9f1d  2016-01-03 Leon Jacobs Only attempt to read package menus if they are defined</span>
+<span class="err">3b7ecad  2016-01-03 Leon Jacobs Allow packages to hook into character menus</span>
+<span class="err">bac4a6e  2015-12-29 Leon Jacobs Add Datatables to starbase summary</span>
+</code></pre></div>
+
+
+<h3 id="1019">1.0.19<a class="headerlink" href="#1019" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">f212c78  2016-01-26 Leon Jacobs (tag: 1.0.19) Version Bump</span>
+<span class="err">d5376f9  2016-01-26 Leon Jacobs Update Copyright</span>
+<span class="err">39c8243  2016-01-26 Leon Jacobs Subclass the bouncers</span>
+<span class="err">afb0be5  2016-01-26 Leon Jacobs Add a People Groups feature</span>
+<span class="err">17c4f3e  2016-01-11 Leon Jacobs Set queue status update time via configuration</span>
+<span class="err">5d30ff0  2016-01-08 Leon Jacobs Fix eveseat/seat#48 by adding data-order attributes</span>
+<span class="err">530c268  2016-01-07 Leon Jacobs Add a check for loaded modules and php version</span>
+<span class="err">c84baaa  2016-01-07 Leon Jacobs Merge pull request #18 from warlof/ticket38</span>
+<span class="err">e4e1fd0  2016-01-07 Leon Jacobs Merge pull request #20 from warlof/ticket43</span>
+<span class="err">94e470d  2016-01-05 elfaus  Fix wishlist #38 eveseat/seat#38</span>
+<span class="err">21a3bb3  2016-01-06 elfaus  Fix issue eveseat/seat issues#43 - Update calc formula - Adding ceil in order to get round item unit (ccp like)</span>
+<span class="err">274409b  2016-01-06 Leon Jacobs Use league/csv to parse CSV&#39;s instead of the homebrew</span>
+<span class="err">741755d  2016-01-06 Leon Jacobs Remove unnecessary re-fetch of model data</span>
+<span class="err">b7ff1a2  2016-01-06 Leon Jacobs Fix eveseat/seat#39 by changing ownership of an existing key.</span>
+<span class="err">8fcc13e  2016-01-06 Leon Jacobs Remove footer. Datatables will count the keys</span>
+<span class="err">b357826  2016-01-06 Leon Jacobs Code formatting fixes</span>
+<span class="err">d5f58de  2016-01-06 Leon Jacobs Merge pull request #19 from Cynabal/master</span>
+<span class="err">7a78e2f  2016-01-06 Leon Jacobs Merge pull request #17 from warlof/french</span>
+<span class="err">9d2ab0f  2016-01-05 Cynabal Update seat.php</span>
+<span class="err">86da25f  2016-01-05 elfaus  New translation according to v1.0.18</span>
+</code></pre></div>
+
+
+<h3 id="1020">1.0.20<a class="headerlink" href="#1020" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e2056a1  2016-01-26 Leon Jacobs (tag: 1.0.20) Version Bump</span>
+<span class="err">92986b7  2016-01-26 Leon Jacobs Remove pcntl requirement</span>
+<span class="err">ad5f515  2016-01-26 Leon Jacobs Merge pull request #21 from warlof/french</span>
+<span class="err">642a832  2016-01-26 elfaus  New french translation according to 1.0.19</span>
+</code></pre></div>
+
+
+<h3 id="1021">1.0.21<a class="headerlink" href="#1021" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="mi">70783</span><span class="n">d8</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">02</span> <span class="n">Leon</span> <span class="nf">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">21</span><span class="p">)</span> <span class="n">Version</span> <span class="n">Bump</span>
+<span class="n">c9188b7</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">02</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">eveseat</span><span class="o">/</span><span class="n">seat</span><span class="c1">#60 by using `firstOrNew` instead of create</span>
+<span class="mi">98</span><span class="n">b9679</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">27</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">eveseat</span><span class="o">/</span><span class="n">seat</span><span class="c1">#51 by always showing the pagination</span>
+</code></pre></div>
+
+
+<h3 id="1022">1.0.22<a class="headerlink" href="#1022" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">cc8019a  2016-02-09 Leon Jacobs (tag: 1.0.22) Version Bump</span>
+<span class="err">0f02f88  2016-02-09 Leon Jacobs Fix eveseat/seat#59 by adding a unique validation constraint</span>
+<span class="err">c69fa2f  2016-02-09 Leon Jacobs Add button to easily re-enable keys</span>
+</code></pre></div>
+
+
+<h3 id="1023">1.0.23<a class="headerlink" href="#1023" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">954c178  2016-03-01 Leon Jacobs (tag: 1.0.23) Version Bump</span>
+<span class="err">498b868  2016-02-29 Leon Jacobs Fix eveseat/seat#70 by ignoring the current users email in the constraint</span>
+<span class="err">8422602  2016-02-29 Leon Jacobs Fix eveseat/seat#57 by adding missing language strings</span>
+</code></pre></div>
+
+
+<h3 id="1024">1.0.24<a class="headerlink" href="#1024" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">c20194b  2016-04-14 Leon Jacobs (tag: 1.0.24) Version Bump</span>
+<span class="err">eac101f  2016-04-13 Leon Jacobs CS Fixes</span>
+<span class="err">f6e3186  2016-04-13 Leon Jacobs Small refactoring and CS fixes</span>
+<span class="err">9997914  2016-04-13 dysath  Adding Corporation Wallet Ledger (#23)</span>
+</code></pre></div>
+
+
+<h3 id="1025">1.0.25<a class="headerlink" href="#1025" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">168bb3e  2016-04-29 Leon Jacobs (tag: 1.0.25) Version Bump</span>
+<span class="err">aee17af  2016-04-29 Leon Jacobs Add ability to force a minimum API access mask.</span>
+<span class="err">5101767  2016-04-29 Leon Jacobs Start adding search functionality</span>
+<span class="err">b8ac4fb  2016-04-29 Leon Jacobs Remove accountid as it is not useful data</span>
+<span class="err">8604036  2016-04-29 Leon Jacobs Fix eveseat/seat#81 by validating for numeric instead of integers</span>
+<span class="err">e1cd641  2016-04-29 Leon Jacobs Fix eveseat/seat#78 by adding a link to view one mail only</span>
+<span class="err">60727e4  2016-04-29 Leon Jacobs Warn if the default admin contact is still set. Ref eveseat/seat#77</span>
+<span class="err">a5d1f8f  2016-04-28 Leon Jacobs Fix eveseat/seat#65 by setting the key_id in the model</span>
+<span class="err">9884772  2016-04-26 Loïc LEUILLIOT fix reinforcement time using API stateTimeStamp (#24)</span>
+</code></pre></div>
+
+
+<h3 id="1026">1.0.26<a class="headerlink" href="#1026" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">981ccc4  2016-05-14 Leon Jacobs (tag: 1.0.26) Version Bump</span>
+<span class="err">0796b2c  2016-05-13 Leon Jacobs Allow SSO to be enabled/disabled via the web interface.</span>
+<span class="err">7a605be  2016-05-13 Leon Jacobs Give accounts a temp email address and flag Sso created accounts</span>
+<span class="err">6efc9bf  2016-05-13 Leon Jacobs Add first support for the EVE Online SSO</span>
+</code></pre></div>
+
+
+<h3 id="1027">1.0.27<a class="headerlink" href="#1027" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">7689032  2016-05-30 Leon Jacobs (tag: 1.0.27) Version Bump</span>
+<span class="err">c036c44  2016-05-30 Leon Jacobs Update Provider with new method name.</span>
+</code></pre></div>
+
+
+<h3 id="1028">1.0.28<a class="headerlink" href="#1028" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">4e5225e  2016-06-26 Leon Jacobs (tag: 1.0.28) Version Bump</span>
+<span class="err">5b2443b  2016-06-26 Leon Jacobs FIx indentation</span>
+<span class="err">f9b6ee8  2016-06-26 James Browning Added total values to the Bounty Prizes and PI monthly ledgers. (#25)</span>
+<span class="err">21fc0d9  2016-06-26 Leon Jacobs Remove logic that is now in the service repository.</span>
+</code></pre></div>
+
+
+<h3 id="1029">1.0.29<a class="headerlink" href="#1029" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">bc76609  2016-07-10 Leon Jacobs (tag: 1.0.29) Version Bump</span>
+<span class="err">12a1229  2016-07-10 Leon Jacobs Resolve names of affiliations.</span>
+<span class="err">e1c82e3  2016-07-10 Leon Jacobs Paginate character contracts and all killmails</span>
+<span class="err">91a5e98  2016-07-10 Leon Jacobs Fix eveseat/seat#111 by paginating the results</span>
+<span class="err">3ac3699  2016-07-10 Leon Jacobs Fix eveseat/seat#121 by adding a button to re-enable all keys</span>
+<span class="err">a6a8897  2016-07-08 Leon Jacobs Add warning about a autogenerated email from sso</span>
+<span class="err">c66c68e  2016-07-08 Leon Jacobs Fix spacing</span>
+<span class="err">4aa702d  2016-07-08 Leon Jacobs Small codestyle related fixes</span>
+<span class="err">1cca04d  2016-07-08 Loïc LEUILLIOT Provide a way for user to change their email address (#27)</span>
+<span class="err">e27d545  2016-06-28 Martin Morling Adjusted setting (#26)</span>
+</code></pre></div>
+
+
+<h3 id="1030">1.0.30<a class="headerlink" href="#1030" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">bc1f5ac  2016-07-23 Leon Jacobs (tag: 1.0.30) Version Bump</span>
+<span class="err">33b0e03  2016-07-23 Loïc LEUILLIOT Update full api mask (#31)</span>
+<span class="err">ec19039  2016-07-23 Leon Jacobs Add link to analytics doc</span>
+<span class="err">ccd332d  2016-07-23 Leon Jacobs Add ability to disable tracking completely.</span>
+<span class="err">c7372e9  2016-07-22 Loïc LEUILLIOT Add corporation titles to character sheet</span>
+<span class="err">b527652  2016-07-22 Loïc LEUILLIOT Add contact tracking links into character and corporation contact list (#30)</span>
+</code></pre></div>
+
+
+<h3 id="1031">1.0.31<a class="headerlink" href="#1031" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">9fdea41  2016-10-14 Leon Jacobs (tag: 1.0.31) Version Bump</span>
+<span class="err">8d1f8fd  2016-10-14 Leon Jacobs Formatting and style fixes</span>
+<span class="err">360e76c  2016-10-14 Loïc LEUILLIOT add SDE version into both footer and settings page (#39)</span>
+<span class="err">1db0265  2016-10-13 Leon Jacobs Add alliance name filter to character list</span>
+<span class="err">770044c  2016-10-13 Loïc LEUILLIOT Fix permission issues (#38)</span>
+<span class="err">7c935df  2016-10-13 Loïc LEUILLIOT add alliance icon and name into character list. fixes eveseat/seat#134</span>
+<span class="err">2ad376f  2016-09-06 David Wright Rename EveonlineProvider.php to EveOnlineProvider.php (#36)</span>
+<span class="err">edb6543  2016-08-25 Leon Jacobs Fix formatting</span>
+<span class="err">584c9e6  2016-08-25 Loïc LEUILLIOT Add collateral amount into contract list (#33)</span>
+<span class="err">433f10a  2016-08-25 Leon Jacobs Fix formatting and restore min_access_mask language string</span>
+<span class="err">60b7cd6  2016-08-25 Loïc LEUILLIOT Create a new minimum required mask dedicated for corporation (#34)</span>
+<span class="err">22c4209  2016-08-25 Loïc LEUILLIOT Add paid-until in Key Details view (depends on PR paid-until branch from eveseat/eveapi) (#32)</span>
+</code></pre></div>
+
+
+<h3 id="200-alpha1">2.0.0-alpha1<a class="headerlink" href="#200-alpha1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">dd76e24</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">26</span> <span class="n">Leon</span> <span class="nf">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">alpha1</span><span class="p">)</span> <span class="k">Update</span> <span class="n">composer</span> <span class="k">for</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span> <span class="n">packages</span> <span class="k">and</span> <span class="n">version</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">-</span><span class="n">alpha1</span>
+<span class="n">a408ddf</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">a</span> <span class="k">character</span> <span class="n">wallet</span> <span class="n">spend</span> <span class="n">graph</span><span class="p">.</span>
+<span class="n">ff13f32</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Introduce</span> <span class="n">ChartJS</span> <span class="k">and</span> <span class="k">add</span> <span class="n">more</span> <span class="n">dashboard</span> <span class="n">elements</span><span class="p">.</span>
+<span class="mi">21067</span><span class="n">c6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">22</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Allow</span> <span class="n">packages</span> <span class="k">to</span> <span class="kt">set</span> <span class="n">a</span> <span class="n">permission</span> <span class="n">required</span> <span class="k">for</span> <span class="n">a</span> <span class="n">menu</span> <span class="n">item</span><span class="p">.</span>
+<span class="n">b82aa7d</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">21</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Use</span> <span class="n">select2</span> <span class="k">for</span> <span class="k">character</span> <span class="n">selection</span>
+<span class="n">db20434</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">21</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="kt">Set</span> <span class="n">main</span> <span class="k">character</span> <span class="n">ID</span> <span class="o">&amp;</span> <span class="n">name</span> <span class="k">on</span> <span class="n">SSO</span> <span class="n">login</span>
+<span class="mi">7</span><span class="n">c4868f</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">21</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Allow</span> <span class="k">for</span> <span class="n">sub</span> <span class="n">menus</span> <span class="k">to</span> <span class="n">be</span> <span class="n">pluralized</span>
+<span class="mi">685</span><span class="n">b96d</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">localization</span> <span class="k">for</span> <span class="n">email</span> <span class="n">verification</span><span class="p">.</span>
+<span class="mi">5</span><span class="n">ea1f72</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="n">unessesary</span> <span class="n">file</span>
+<span class="mi">85</span><span class="n">ad7de</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">email</span> <span class="n">verification</span> <span class="k">to</span> <span class="n">account</span> <span class="n">creation</span><span class="p">.</span>
+<span class="mi">6</span><span class="n">cc2854</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="n">EVE</span> <span class="n">API</span> <span class="n">status</span> <span class="k">to</span> <span class="k">match</span> <span class="n">new</span> <span class="n">style</span><span class="p">.</span>
+<span class="mi">32641</span><span class="n">e0</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Move</span> <span class="n">supervisor</span> <span class="n">status</span> <span class="k">to</span> <span class="n">a</span> <span class="n">panel</span><span class="p">.</span>
+<span class="mi">99</span><span class="n">ae5b6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Prepare</span> <span class="n">status</span> <span class="n">response</span> <span class="k">from</span> <span class="n">a</span> <span class="n">collection</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">a</span> <span class="n">raw</span> <span class="n">array</span><span class="p">.</span>
+<span class="mi">241</span><span class="n">c9a9</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Use</span> <span class="n">process</span> <span class="k">group</span> <span class="n">name</span> <span class="k">from</span> <span class="n">config</span> <span class="n">file</span><span class="p">.</span>
+<span class="mi">70</span><span class="n">bb0ff</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Bind</span> <span class="s1">&#39;supervisor&#39;</span> <span class="k">as</span> <span class="n">a</span> <span class="n">singleton</span> <span class="k">into</span> <span class="n">the</span> <span class="n">IoC</span> <span class="k">to</span> <span class="n">remove</span> <span class="n">code</span> <span class="n">clutter</span><span class="p">.</span>
+<span class="mi">5</span><span class="n">b88e1b</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Move</span> <span class="n">supervisor</span> <span class="n">config</span> <span class="n">ot</span> <span class="n">its</span> <span class="n">own</span> <span class="n">file</span><span class="p">.</span>
+<span class="n">c40bf89</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Move</span> <span class="n">available</span> <span class="n">languages</span> <span class="k">to</span> <span class="n">its</span> <span class="n">own</span> <span class="n">config</span>
+<span class="n">d3879ac</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">19</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="n">Improve</span> <span class="n">queue</span> <span class="n">dashboard</span> <span class="k">by</span> <span class="n">adding</span> <span class="n">supervisor</span> <span class="nf">information</span> <span class="p">(</span><span class="c1">#43)</span>
+<span class="n">f09384a</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">19</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">ability</span> <span class="k">to</span> <span class="n">edit</span> <span class="n">existing</span> <span class="n">notes</span><span class="p">.</span>
+<span class="mi">4</span><span class="n">c30a48</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">19</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="k">character</span> <span class="k">specific</span> <span class="n">notes</span> <span class="n">model</span> <span class="k">and</span> <span class="k">use</span> <span class="n">services</span> <span class="n">model</span> <span class="n">note</span> <span class="n">trait</span><span class="p">.</span>
+<span class="mi">56</span><span class="n">f316c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">18</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">First</span> <span class="n">iteration</span> <span class="n">adding</span> <span class="n">notes</span> <span class="k">to</span> <span class="n">the</span> <span class="n">intel</span> <span class="n">section</span>
+<span class="n">cf30e2f</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="n">intel</span> <span class="n">journal</span> <span class="n">detail</span>
+<span class="n">f1f4a17</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Allow</span> <span class="n">standings</span> <span class="n">profiles</span> <span class="k">to</span> <span class="n">be</span> <span class="n">built</span> <span class="k">by</span> <span class="n">importing</span> <span class="kt">char</span><span class="o">/</span><span class="n">corp</span> <span class="n">contacts</span> <span class="err">👍</span>
+<span class="mi">0</span><span class="n">f6c11c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Inject</span> <span class="n">the</span> <span class="n">affected</span> <span class="n">id</span> <span class="k">from</span> <span class="n">the</span> <span class="n">request</span><span class="p">.</span>
+<span class="mi">40</span><span class="n">f2b65</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Allow</span> <span class="k">for</span> <span class="n">a</span> <span class="n">standings</span> <span class="n">profile</span> <span class="k">to</span> <span class="n">be</span> <span class="n">deleted</span><span class="p">.</span>
+<span class="n">aed53aa</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">16</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Move</span> <span class="n">People</span> <span class="n">Groups</span> <span class="k">to</span> <span class="n">the</span> <span class="n">Tools</span> <span class="n">section</span>
+<span class="n">a50a741</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">16</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="n">ajax</span> <span class="n">responses</span> <span class="k">and</span> <span class="k">return</span> <span class="n">json</span> <span class="k">for</span> <span class="n">datatables</span><span class="p">.</span>
+<span class="mi">5</span><span class="n">d55b47</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">16</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Move</span> <span class="n">the</span> <span class="n">last</span> <span class="n">summaries</span> <span class="k">to</span> <span class="n">datatables</span>
+<span class="n">e8813d7</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">16</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Convert</span> <span class="n">top</span> <span class="n">transactions</span> <span class="k">to</span> <span class="n">datatables</span> <span class="n">view</span>
+<span class="mi">9</span><span class="n">b6f2b8</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">16</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">alliance</span> <span class="n">name</span> <span class="n">images</span>
+<span class="mi">6</span><span class="n">bb770f</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">15</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Load</span> <span class="n">mail</span> <span class="n">interactions</span> <span class="k">using</span> <span class="n">datatables</span><span class="p">.</span>
+<span class="mi">8712398</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">typo</span> <span class="k">from</span> <span class="ss">`read`</span> <span class="k">to</span> <span class="ss">`ready`</span><span class="p">.</span>
+<span class="mi">441</span><span class="n">a612</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Sort</span> <span class="n">the</span> <span class="k">character</span> <span class="n">list</span> <span class="n">correctly</span>
+<span class="n">debd68e</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Do</span> <span class="k">not</span> <span class="n">include</span> <span class="n">the</span> <span class="n">old</span> <span class="n">filter</span> <span class="n">config</span> <span class="n">file</span>
+<span class="mi">6146</span><span class="n">dca</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="n">state</span> <span class="n">config</span> <span class="n">file</span> <span class="n">of</span> <span class="n">the</span> <span class="n">old</span> <span class="ss">`Filterable`</span> <span class="n">trait</span>
+<span class="mi">5445360</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Convert</span> <span class="k">character</span> <span class="kp">tables</span> <span class="k">to</span> <span class="n">datatables</span><span class="p">.</span>
+<span class="n">abb48be</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">Mail</span> <span class="n">menu</span> <span class="n">entry</span> <span class="n">name</span>
+<span class="mi">94</span><span class="n">a6c32</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Correctly</span> <span class="n">sort</span> <span class="k">by</span> <span class="k">default</span>
+<span class="n">f485c03</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Include</span> <span class="n">external</span> <span class="n">providers</span> <span class="k">in</span> <span class="n">a</span> <span class="n">seperate</span> <span class="n">method</span><span class="p">.</span>
+<span class="n">fdfd922</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">indenting</span>
+<span class="mi">4</span><span class="n">bae275</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">13</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="n">Hide</span> <span class="n">registration</span> <span class="n">link</span> <span class="k">if</span> <span class="n">registration</span> <span class="k">is</span> <span class="nf">disabled</span> <span class="p">(</span><span class="c1">#46)</span>
+<span class="mi">7</span><span class="n">a0cfcb</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">12</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">searching</span> <span class="k">on</span> <span class="n">corporation</span> <span class="n">killboard</span>
+<span class="mi">4</span><span class="n">c04af9</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Indenting</span> <span class="n">fixes</span>
+<span class="n">a5125e3</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="k">Add</span> <span class="n">two</span> <span class="n">low</span> <span class="n">fuel</span> <span class="n">warning</span> <span class="k">on</span> <span class="n">starbase</span> <span class="nf">list</span> <span class="p">(</span><span class="c1">#45)</span>
+<span class="n">de8b88c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Convert</span> <span class="n">Corporation</span> <span class="kp">tables</span> <span class="k">to</span> <span class="n">data</span> <span class="kp">tables</span><span class="p">.</span>
+<span class="mi">34</span><span class="n">c6bc9</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Sort</span> <span class="n">Datatables</span> <span class="n">columns</span> <span class="k">by</span> <span class="k">default</span> <span class="k">on</span> <span class="n">fist</span> <span class="k">column</span>
+<span class="n">d13c96f</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Allow</span> <span class="k">for</span> <span class="n">name</span> <span class="n">resolution</span> <span class="k">to</span> <span class="n">be</span> <span class="n">called</span> <span class="k">by</span> <span class="n">function</span>
+<span class="n">f9b0962</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Covert</span> <span class="n">Corporation</span> <span class="n">View</span> <span class="k">to</span> <span class="k">use</span> <span class="n">Datatables</span>
+<span class="n">e7bd080</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Make</span> <span class="n">datatables</span> <span class="n">responsive</span> <span class="k">by</span> <span class="k">default</span>
+<span class="mi">09714</span><span class="n">e0</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Use</span> <span class="n">the</span> <span class="n">new</span> <span class="n">data</span> <span class="kp">tables</span> <span class="n">helper</span> <span class="k">to</span> <span class="n">make</span> <span class="n">search</span> <span class="o">&amp;</span> <span class="n">sorting</span> <span class="n">work</span>
+<span class="n">a5e8cbe</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">a</span> <span class="n">JS</span> <span class="n">version</span> <span class="n">of</span> <span class="n">the</span> <span class="ss">`human_readable`</span> <span class="n">helper</span>
+<span class="mi">51340</span><span class="n">f8</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">javascript</span> <span class="k">using</span> <span class="ss">`push`</span> <span class="o">&amp;</span> <span class="n">format</span> <span class="n">fixes</span>
+<span class="n">bcc35e0</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="n">Redesign</span> <span class="n">queue</span> <span class="n">dashboard</span> <span class="k">to</span> <span class="k">use</span> <span class="n">a</span> <span class="n">dynamic</span> <span class="k">table</span> <span class="p">(</span><span class="c1">#41)</span>
+<span class="mi">142</span><span class="n">bb8a</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">11</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">scripts</span> <span class="k">using</span> <span class="n">a</span> <span class="ss">`stack`</span> <span class="n">instead</span> <span class="n">of</span> <span class="ss">`section`</span><span class="p">.</span>
+<span class="n">a99aeb6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">10</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">yajra</span><span class="o">/</span><span class="n">laravel</span><span class="o">-</span><span class="n">datatables</span> <span class="k">and</span> <span class="k">convert</span> <span class="n">api</span> <span class="k">key</span> <span class="n">list</span> <span class="k">to</span> <span class="n">datatables</span>
+<span class="n">e7d8e07</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">09</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Start</span> <span class="n">the</span> <span class="n">intel</span> <span class="n">journal</span> <span class="n">detail</span> <span class="n">view</span><span class="p">.</span>
+<span class="mi">6</span><span class="n">dd6312</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">08</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">First</span> <span class="n">rough</span> <span class="n">commit</span> <span class="n">of</span> <span class="k">character</span> <span class="n">intel</span> <span class="n">module</span><span class="o">!</span> <span class="err">👾</span>
+<span class="n">d7aa864</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">07</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Formatting</span> <span class="n">fixes</span>
+<span class="mi">3369</span><span class="n">f0b</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">06</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">ability</span> <span class="k">to</span> <span class="n">mark</span> <span class="n">label</span> <span class="k">as</span> <span class="n">a</span> <span class="n">plural</span>
+<span class="mi">6</span><span class="n">dcb3de</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">06</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="n">refactoring</span> <span class="n">a</span> <span class="kt">bit</span> <span class="n">menu</span> <span class="n">composer</span> <span class="k">in</span> <span class="k">order</span> <span class="k">to</span> <span class="n">define</span> <span class="n">a</span> <span class="n">menu</span> <span class="n">composer</span> <span class="n">type</span> <span class="k">and</span> <span class="k">use</span> <span class="n">config</span> <span class="n">file</span> <span class="n">instead</span> <span class="n">hard</span> <span class="n">coded</span> <span class="nf">entry</span> <span class="p">(</span><span class="c1">#44)</span>
+<span class="n">ea656b5</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Code</span> <span class="n">formatting</span> <span class="n">fixes</span><span class="p">.</span>
+<span class="mi">869</span><span class="n">e26c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Explode</span> <span class="n">the</span> <span class="n">Corporation</span><span class="err">\</span><span class="n">ViewController</span> <span class="k">into</span> <span class="n">seperate</span> <span class="n">controllers</span>
+<span class="n">e19b350</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Paginate</span> <span class="n">market</span> <span class="n">orders</span>
+<span class="mi">0933</span><span class="n">c79</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Explode</span> <span class="k">Character</span><span class="err">\</span><span class="n">ViewController</span> <span class="k">into</span> <span class="n">better</span> <span class="n">managed</span> <span class="n">controllers</span>
+<span class="n">b5e6f9f</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">05</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Extend</span> <span class="n">new</span> <span class="n">core</span> <span class="n">controllers</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">base</span> <span class="k">in</span> <span class="n">App</span> <span class="n">namespace</span>
+<span class="mi">1890</span><span class="n">f8a</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Redirect</span> <span class="k">to</span> <span class="n">the</span> <span class="n">newly</span> <span class="n">created</span> <span class="n">role</span>
+<span class="n">e38c7ba</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">ability</span> <span class="k">to</span> <span class="n">wildcard</span> <span class="n">corporation</span> <span class="k">and</span> <span class="k">character</span> <span class="n">access</span>
+<span class="mi">5</span><span class="n">d8ccca</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Simply</span> <span class="n">validation</span> <span class="k">using</span> <span class="n">form</span> <span class="n">array</span> <span class="n">validation</span><span class="p">.</span>
+<span class="mi">231</span><span class="n">ea86</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="ss">`insteadof`</span> <span class="k">as</span> <span class="n">repository</span> <span class="n">refactor</span> <span class="n">removed</span> <span class="n">the</span> <span class="n">need</span> <span class="k">for</span> <span class="n">this</span>
+<span class="n">ce1bd67</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Change</span> <span class="n">Action</span> <span class="k">to</span> <span class="n">route</span> <span class="n">home</span>
+<span class="n">f6fb5f9</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">translation</span> <span class="n">strings</span>
+<span class="mi">27</span><span class="n">bd2c2</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">04</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Implement</span> <span class="n">Inverse</span> <span class="n">access</span> <span class="n">checking</span>
+<span class="mi">48160</span><span class="n">d5</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">03</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Rename</span> <span class="n">Pillow</span> <span class="k">to</span> <span class="n">AccessManager</span> <span class="k">and</span> <span class="k">add</span> <span class="n">typing</span>
+<span class="mi">7042418</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">03</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">translation</span> <span class="k">key</span>
+<span class="mi">896592</span><span class="n">c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">03</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">support</span> <span class="k">for</span> <span class="n">storing</span> <span class="n">inverse</span> <span class="n">permissions</span>
+<span class="mi">86</span><span class="n">ade0b</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">01</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">the</span> <span class="n">AuthorizationController</span> <span class="k">and</span> <span class="n">fix</span> <span class="n">the</span> <span class="n">KeyBouncer</span>
+<span class="n">d8a412f</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">31</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="n">bouncers</span> <span class="k">to</span> <span class="k">return</span> <span class="n">a</span> <span class="n">redirect</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">view</span>
+<span class="mi">2</span><span class="n">d73c70</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">29</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="k">to</span> <span class="k">match</span> <span class="n">new</span> <span class="n">class</span> <span class="n">names</span> <span class="k">in</span> <span class="n">eveapi</span> <span class="n">repo</span>
+<span class="mi">249</span><span class="n">c5af</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">28</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Fix</span> <span class="n">language</span> <span class="n">string</span>
+<span class="mi">038</span><span class="n">ba4d</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="k">to</span> <span class="n">make</span> <span class="k">use</span> <span class="n">of</span> <span class="n">new</span> <span class="n">Corp</span> <span class="n">repository</span> <span class="n">classes</span>
+<span class="n">fb129f9</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">25</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="k">to</span> <span class="n">make</span> <span class="k">use</span> <span class="n">of</span> <span class="n">new</span> <span class="k">Character</span> <span class="n">repository</span> <span class="n">classes</span>
+<span class="mi">799</span><span class="n">fdee</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">24</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="n">distrib</span> <span class="n">JS</span><span class="o">/</span><span class="n">CSS</span>
+<span class="mi">74752</span><span class="n">d2</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Upgrade</span> <span class="k">to</span> <span class="n">AdminLTE</span> <span class="mi">2</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">7</span>
+<span class="mi">735279</span><span class="n">c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="n">usages</span> <span class="n">of</span> <span class="ss">`collect()`</span><span class="p">.</span> <span class="k">All</span> <span class="n">queries</span> <span class="k">return</span> <span class="n">a</span> <span class="n">collection</span> <span class="k">by</span> <span class="k">default</span>
+<span class="n">ee461fb</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Upgrade</span> <span class="ss">`pragmarx/google2fa`</span> <span class="o">&amp;</span> <span class="ss">`league/csv`</span> <span class="n">dependencies</span>
+<span class="n">e414ecb</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">23</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Updpate</span> <span class="n">Form</span> <span class="n">Request</span> <span class="n">validation</span> <span class="k">to</span> <span class="n">extend</span> <span class="n">new</span> <span class="n">base</span> <span class="n">class</span>
+<span class="n">fe0606d</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">22</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Show</span> <span class="n">icon</span> <span class="n">of</span> <span class="n">actual</span> <span class="n">ship</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">a</span> <span class="n">generic</span> <span class="n">one</span>
+<span class="n">e4821ca</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">18</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="n">fix</span> <span class="n">paid</span><span class="o">-</span><span class="n">until</span> <span class="n">issue</span> <span class="k">in</span> <span class="n">detail</span> <span class="n">api</span> <span class="k">key</span> <span class="n">view</span> <span class="n">due</span> <span class="k">to</span> <span class="n">possible</span> <span class="n">missing</span> <span class="nf">status</span> <span class="p">(</span><span class="c1">#40)</span>
+<span class="mi">2</span><span class="n">bef52c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Move</span> <span class="n">logout</span> <span class="k">to</span> <span class="n">a</span> <span class="n">POST</span> <span class="n">method</span> <span class="k">as</span> <span class="n">the</span> <span class="n">new</span> <span class="n">Laravel</span> <span class="k">default</span>
+<span class="n">abea1b1</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Rename</span> <span class="ss">`lists()`</span> <span class="k">to</span> <span class="ss">`pluck()`</span>
+<span class="n">c215f78</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">15</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="n">Authentication</span> <span class="n">Scaffolding</span> <span class="k">for</span> <span class="n">Laravel</span> <span class="mi">5</span><span class="p">.</span><span class="mi">3</span>
+<span class="mi">97</span><span class="n">fdc4d</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">15</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">Notifiable</span> <span class="n">trait</span> <span class="n">introduced</span> <span class="k">in</span> <span class="n">L5</span><span class="p">.</span><span class="mi">3</span>
+<span class="mi">6366</span><span class="n">ccc</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">15</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="n">Events</span> <span class="k">to</span> <span class="k">use</span> <span class="n">new</span> <span class="n">Class</span> <span class="n">based</span> <span class="n">events</span> <span class="k">for</span> <span class="n">L5</span><span class="p">.</span><span class="mi">3</span>
+<span class="n">c45ac15</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">15</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Update</span> <span class="n">composer</span> <span class="k">to</span> <span class="k">require</span> <span class="n">PHP7</span> <span class="k">and</span> <span class="n">Laravel</span> <span class="mi">5</span><span class="p">.</span><span class="mi">3</span>
+</code></pre></div>
+
+
+<h3 id="200-alpha2">2.0.0-alpha2<a class="headerlink" href="#200-alpha2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">680e4a3  2016-11-26 Leon Jacobs (tag: 2.0.0-alpha2) Drop minimum stability, add prefer-stable and bump to 2.0.0-alpha2.</span>
+</code></pre></div>
+
+
+<h3 id="200">2.0.0<a class="headerlink" href="#200" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">e648d7e</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">08</span> <span class="n">Leon</span> <span class="nf">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span> <span class="n">Version</span> <span class="n">Bump</span><span class="o">!</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="o">!</span> <span class="err">⚡️</span>
+<span class="mi">690</span><span class="n">f1be</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">08</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Format</span> <span class="k">and</span> <span class="n">style</span> <span class="n">fixes</span><span class="p">.</span>
+<span class="n">f7ad9a6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">08</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="k">add</span> <span class="n">disable</span> <span class="k">key</span> <span class="nf">function</span> <span class="p">(</span><span class="c1">#50)</span>
+<span class="mi">48069</span><span class="n">d6</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">30</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">a</span> <span class="k">check</span> <span class="k">for</span> <span class="n">cases</span> <span class="k">where</span> <span class="n">api</span> <span class="k">keys</span> <span class="n">may</span> <span class="n">have</span> <span class="ss">`null`</span> <span class="n">constraints</span><span class="p">.</span>
+<span class="mi">82</span><span class="n">f1bbb</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">30</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Move</span> <span class="n">the</span> <span class="n">Validation</span> <span class="n">namespace</span> <span class="k">to</span> <span class="n">Seat</span><span class="err">\</span><span class="n">Web</span><span class="err">\</span><span class="n">Http</span><span class="err">\</span><span class="n">Validation</span><span class="p">.</span>
+<span class="mi">55436</span><span class="n">eb</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">30</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Allow</span> <span class="n">constraints</span> <span class="k">to</span> <span class="n">be</span> <span class="kt">set</span> <span class="k">on</span> <span class="k">specific</span> <span class="n">API</span> <span class="k">keys</span><span class="p">.</span>
+<span class="mi">1</span><span class="n">ab8153</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">29</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">message</span> <span class="n">that</span> <span class="k">all</span> <span class="n">workers</span> <span class="n">will</span> <span class="n">run</span> <span class="n">without</span> <span class="n">a</span> <span class="k">constraint</span> <span class="kt">set</span><span class="p">.</span>
+<span class="n">d2faf43</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">29</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">First</span> <span class="n">iteration</span> <span class="n">of</span> <span class="n">adding</span> <span class="n">worker</span> <span class="n">constraints</span><span class="p">.</span>
+<span class="mi">893</span><span class="n">f9a9</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">29</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Formatting</span> <span class="k">and</span> <span class="n">style</span> <span class="n">fixes</span><span class="p">.</span>
+<span class="mi">946578</span><span class="n">d</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">29</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Change</span> <span class="n">method</span> <span class="n">visibility</span> <span class="k">to</span> <span class="n">private</span><span class="p">.</span>
+<span class="n">f65286c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">29</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Small</span> <span class="n">refactoring</span> <span class="k">and</span> <span class="n">code</span> <span class="n">cleanup</span> <span class="k">for</span> <span class="n">the</span> <span class="n">SSO</span> <span class="n">upgrade</span> <span class="k">option</span><span class="p">.</span>
+<span class="mi">8583</span><span class="n">a5c</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">29</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="n">fix</span> <span class="n">multiple</span> <span class="n">user</span> <span class="n">creation</span> <span class="k">when</span> <span class="n">user</span> <span class="k">is</span> <span class="n">already</span> <span class="n">owning</span> <span class="n">an</span> <span class="n">account</span> <span class="k">and</span> <span class="n">authenticate</span> <span class="k">with</span> <span class="nf">SSO</span> <span class="p">(</span><span class="c1">#49)</span>
+<span class="n">c2d4cc7</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">28</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Correctly</span> <span class="n">sort</span> <span class="n">first</span> <span class="n">search</span> <span class="n">results</span><span class="p">.</span>
+<span class="mi">0</span><span class="n">da3bf0</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">28</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="k">character</span> <span class="n">skills</span> <span class="k">and</span> <span class="n">assets</span> <span class="n">search</span><span class="p">.</span>
+<span class="n">fa2a4fd</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">28</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="k">return</span> <span class="n">type</span> <span class="k">as</span> <span class="n">there</span> <span class="k">is</span> <span class="n">more</span> <span class="n">than</span> <span class="n">one</span>
+<span class="mi">8892</span><span class="n">a83</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">28</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Show</span> <span class="n">security</span> <span class="n">logs</span> <span class="k">using</span> <span class="n">datatables</span><span class="p">.</span>
+<span class="n">bc2b8f2</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">28</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Convert</span> <span class="n">Search</span> <span class="n">results</span> <span class="k">to</span> <span class="k">use</span> <span class="n">Datatables</span><span class="p">.</span>
+<span class="n">e259c38</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">27</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Add</span> <span class="n">skills</span> <span class="n">graphs</span> <span class="k">to</span> <span class="k">character</span> <span class="n">skills</span> <span class="n">view</span><span class="p">.</span>
+<span class="mi">26</span><span class="n">bbed0</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">27</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Move</span> <span class="k">character</span> <span class="n">skills</span> <span class="n">graphing</span> <span class="n">routes</span> <span class="n">the</span> <span class="n">the</span> <span class="n">CharacterController</span><span class="p">.</span>
+<span class="mi">29</span><span class="n">f8614</span>  <span class="mi">2016</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">27</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="k">add</span> <span class="n">skills</span> <span class="n">related</span> <span class="nf">chart</span> <span class="p">(</span><span class="c1">#48)</span>
+</code></pre></div>
+
+
+<h3 id="201">2.0.1<a class="headerlink" href="#201" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">00536d7  2016-12-10 Leon Jacobs (tag: 2.0.1) Version Bump</span>
+<span class="err">41cc905  2016-12-10 Leon Jacobs Remove trailing brace</span>
+<span class="err">b8ed06b  2016-12-10 Leon Jacobs Only display graphs when there is data.</span>
+<span class="err">14c547e  2016-12-10 Leon Jacobs Small layout refactor and removal of self account deletion.</span>
+<span class="err">d07639f  2016-12-10 Leon Jacobs Log impersonation events.</span>
+<span class="err">158b141  2016-12-10 Leon Jacobs Improve impersonation by adding an easy revert option.</span>
+<span class="err">5f8ea64  2016-12-10 Leon Jacobs Allow sorting by key status and show disabled reason in details.</span>
+<span class="err">986541c  2016-12-10 Leon Jacobs Fix global worker constraints view.</span>
+<span class="err">536880c  2016-12-10 Leon Jacobs Update datatables version constraint as newer versions are broken.</span>
+<span class="err">edb4f27  2016-12-09 Leon Jacobs Fix eveseat/seat#152 by instantiating with `moment.utc`.</span>
+</code></pre></div>
+
+
+<h3 id="202">2.0.2<a class="headerlink" href="#202" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e7590c3  2016-12-10 Leon Jacobs (tag: 2.0.2) Version Bump</span>
+<span class="err">7d00d54  2016-12-10 Leon Jacobs Limit keys returned based on permissions</span>
+</code></pre></div>
+
+
+<h3 id="203">2.0.3<a class="headerlink" href="#203" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">e960118  2016-12-11 Leon Jacobs (tag: 2.0.3) Version Bump</span>
+<span class="err">d30202a  2016-12-11 Leon Jacobs Update view to check new key status field</span>
+<span class="err">3f826f8  2016-12-11 Leon Jacobs Add option to disable email activation requirement.</span>
+<span class="err">a388a5d  2016-12-11 Leon Jacobs Use `setting()` helper instead of static Class method</span>
+<span class="err">55cfca3  2016-12-11 Loïc LEUILLIOT fixing possible issue with Supervisor Monitor setting (#51)</span>
+</code></pre></div>
+
+
+<h3 id="204">2.0.4<a class="headerlink" href="#204" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">3d2f6b3  2016-12-12 Leon Jacobs (tag: 2.0.4) Version Bump</span>
+<span class="err">00c3bf2  2016-12-12 Leon Jacobs Grant first time SSO login opportinity to set an email.</span>
+<span class="err">aa62453  2016-12-12 Leon Jacobs Return a response instead of a just a view.</span>
+</code></pre></div>
+
+
+<h3 id="205">2.0.5<a class="headerlink" href="#205" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">ed9901b  2016-12-13 Leon Jacobs (tag: 2.0.5) Version Bump</span>
+<span class="err">617670b  2016-12-13 Leon Jacobs Finally, add the favico.</span>
+<span class="err">a9f3aa4  2016-12-13 Leon Jacobs Help prevent users from accidently disabling themselves.</span>
+<span class="err">786a4ed  2016-12-13 Leon Jacobs Fix eveseat/seat#158 by checking if Email Activation is required.</span>
+</code></pre></div>
+
+
+<h3 id="206">2.0.6<a class="headerlink" href="#206" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">a00f236  2016-12-15 Leon Jacobs (tag: 2.0.6) Version Bump</span>
+<span class="err">4637e88  2016-12-15 Leon Jacobs Style fixes</span>
+<span class="err">829b93b  2016-12-15 Loïc LEUILLIOT fix issue related to permission when an object owner get all permission, including system permission. (#54)</span>
+<span class="err">e31f19e  2016-12-15 Leon Jacobs Apply threaded view to mail timeline</span>
+<span class="err">9532c87  2016-12-15 Leon Jacobs Code style and formatting fixes.</span>
+<span class="err">8b640ba  2016-12-15 Loïc LEUILLIOT Key list search (#56)</span>
+<span class="err">df176ba  2016-12-14 Leon Jacobs Add a threaded view to the mail read view.</span>
+<span class="err">06fe0ac  2016-12-14 Loïc LEUILLIOT fixing issue introduce on #52 (#55)</span>
+<span class="err">799a7b9  2016-12-14 Loïc LEUILLIOT add the ability to search on keyID field from ApiKey (#52)</span>
+</code></pre></div>
+
+
+<h3 id="207">2.0.7<a class="headerlink" href="#207" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">63adffb  2016-12-16 Leon Jacobs (tag: 2.0.7) Version Bump</span>
+<span class="err">d4c6988  2016-12-16 Leon Jacobs Mail characterName clickable.</span>
+<span class="err">92bf30b  2016-12-16 Leon Jacobs Make mail view as threads configurable.</span>
+<span class="err">915eb64  2016-12-16 Leon Jacobs Ensure require_activation is validated.</span>
+<span class="err">40b1263  2016-12-16 Leon Jacobs Allow jobs to be manually killed/removed.</span>
+<span class="err">c26f501  2016-12-15 Leon Jacobs Fix typo</span>
+<span class="err">99c5c3f  2016-12-15 Leon Jacobs Fix typo</span>
+</code></pre></div>
+
+
+<h3 id="208">2.0.8<a class="headerlink" href="#208" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">b7ecacd  2016-12-21 Leon Jacobs (tag: 2.0.8) Version Bump</span>
+<span class="err">4b7a4af  2016-12-21 Leon Jacobs Give manually submitted update jobs some priority</span>
+<span class="err">8740878  2016-12-21 Leon Jacobs Fix bug where new keys wont show in API key list</span>
+<span class="err">6d28de8  2016-12-21 Leon Jacobs Fix comment</span>
+<span class="err">3ebcf67  2016-12-21 Loïc LEUILLIOT update permission system in order to have a faster discover (#57)</span>
+<span class="err">5881ab5  2016-12-21 Leon Jacobs Show if the joblog is disabled.</span>
+<span class="err">22cb093  2016-12-21 Leon Jacobs Fix language string</span>
+<span class="err">6a01a76  2016-12-21 Leon Jacobs Fix column names</span>
+<span class="err">3bca775  2016-12-21 Leon Jacobs Add ability to view joblogs.</span>
+<span class="err">02bc02c  2016-12-19 Leon Jacobs Add bz2 as an extention requirement</span>
+</code></pre></div>
+
+
+<h3 id="209">2.0.9<a class="headerlink" href="#209" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">ba7118d  2016-12-28 Leon Jacobs (tag: 2.0.9) Version Bump</span>
+<span class="err">507caf2  2016-12-28 Leon Jacobs Show corporation assets contents</span>
+<span class="err">6929851  2016-12-28 Leon Jacobs Update message about job that git pushed to the queue</span>
+<span class="err">ec1b412  2016-12-28 Leon Jacobs Hide update button if key is not enabled</span>
+<span class="err">d08077f  2016-12-28 Leon Jacobs Check that key info exists before attempting to set it</span>
+<span class="err">4ea98ac  2016-12-27 Leon Jacobs Dont consider affiliations for menu item check</span>
+<span class="err">e3740e9  2016-12-27 Leon Jacobs Add filter to clean out null menu entries.</span>
+<span class="err">30f5826  2016-12-26 Leon Jacobs Update sidebar menu loader to sort menu items alphabetically.</span>
+<span class="err">5d1d860  2016-12-26 Leon Jacobs Add corporation contracts view</span>
+<span class="err">11e3cb0  2016-12-26 Leon Jacobs Add contract items view for characters</span>
+<span class="err">fa511ba  2016-12-26 Leon Jacobs Code style tweaks and color tweaks for asset contents view.</span>
+<span class="err">eb4c37b  2016-12-26 freedenizen Web portion of character nested asset view (#58)</span>
+</code></pre></div>
+
+
+<h3 id="2010">2.0.10<a class="headerlink" href="#2010" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">46d14d9  2017-01-01 Leon Jacobs (tag: 2.0.10) Version Bump</span>
+<span class="err">32be7a5  2017-01-01 Leon Jacobs Rename configuration to settings.</span>
+</code></pre></div>
+
+
+<h3 id="2011">2.0.11<a class="headerlink" href="#2011" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">0b890f6  2017-01-12 Leon Jacobs (tag: 2.0.11) Version Bump</span>
+<span class="err">aa88df0  2017-01-12 Leon Jacobs Fix eveseat/seat#173 by adding a unique constriant to emails</span>
+<span class="err">183389f  2017-01-12 freedenizen Characterassets update (#60)</span>
+<span class="err">a3c4d52  2017-01-06 Leon Jacobs Update ms to s</span>
+<span class="err">aab1aae  2017-01-04 Leon Jacobs Improve readability</span>
+<span class="err">0e92e5e  2017-01-04 Leon Jacobs Update styleci config</span>
+<span class="err">45dd47f  2017-01-04 Leon Jacobs Fix eveseat/seat#171 by using `Laravel\Socialite\Two\InvalidStateException`</span>
+<span class="err">cf5c8e0  2017-01-02 Leon Jacobs Apply fixes from StyleCI (#59)</span>
+<span class="err">5ad0d85  2017-01-02 Leon Jacobs Add StyleCI configuration &amp; badge</span>
+<span class="err">ae5b3b2  2017-01-01 Leon Jacobs Style fixes</span>
+</code></pre></div>
+
+
+<h3 id="2012">2.0.12<a class="headerlink" href="#2012" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">052ab31  2017-01-22 Leon Jacobs (tag: 2.0.12) Version Bump</span>
+<span class="err">b3c3cf3  2017-01-22 Leon Jacobs Apply fixes from StyleCI (#62)</span>
+<span class="err">be689d2  2017-01-22 Leon Jacobs Load assets contents using ajax requests</span>
+<span class="err">666d353  2017-01-22 Leon Jacobs Include the original title and sent date when parsed headers arent ok</span>
+<span class="err">5692799  2017-01-22 Leon Jacobs Improve &#39;inverse&#39; tag on permissions and affiliations</span>
+<span class="err">ab28861  2017-01-22 Leon Jacobs Fix eveseat/seat#181 by ensuring that permission inverses are checked</span>
+<span class="err">c3fa810  2017-01-22 Loïc LEUILLIOT Fix ACL issue on menu display if menu is requiring permission affiliation (#61)</span>
+<span class="err">b669fbb  2017-01-20 Leon Jacobs Add codeclimate configuration</span>
+</code></pre></div>
+
+
+<h3 id="2013">2.0.13<a class="headerlink" href="#2013" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="mi">6</span><span class="n">adfb30</span>  <span class="mi">2017</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">19</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mf">2.0</span><span class="o">.</span><span class="mi">13</span><span class="p">)</span> <span class="n">Version</span> <span class="n">Bump</span>
+<span class="n">a179b5e</span>  <span class="mi">2017</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">19</span> <span class="n">BenH</span>    <span class="n">improved</span> <span class="n">lisibility</span> <span class="n">on</span> <span class="n">the</span> <span class="n">skill</span> <span class="n">sheet</span> <span class="n">of</span> <span class="n">a</span> <span class="n">character</span> <span class="p">(</span><span class="c1">#69)</span>
+<span class="n">fe3fac6</span>  <span class="mi">2017</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">19</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Show</span> <span class="n">status</span> <span class="n">of</span> <span class="n">job</span> <span class="n">logging</span>
+<span class="mi">76</span><span class="n">f4e27</span>  <span class="mi">2017</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">19</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Add</span> <span class="n">space</span>
+<span class="n">a95747d</span>  <span class="mi">2017</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">19</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="n">Use</span> <span class="n">font</span><span class="o">-</span><span class="n">awesome</span> <span class="n">package</span> <span class="n">instead</span> <span class="n">raw</span> <span class="kn">import</span> <span class="nn">in</span> <span class="nn">order</span> <span class="nn">to</span> <span class="nn">get</span> <span class="nn">always</span> <span class="nn">last</span> <span class="nn">provided</span> <span class="nn">icons</span> <span class="p">(</span><span class="c1">#68)</span>
+<span class="n">d7bd1fd</span>  <span class="mi">2017</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">10</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="n">Add</span> <span class="n">a</span> <span class="n">third</span> <span class="n">menu</span> <span class="n">level</span> <span class="n">into</span> <span class="n">sidebar</span> <span class="p">(</span><span class="c1">#66)</span>
+<span class="n">b1b685c</span>  <span class="mi">2017</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mi">10</span> <span class="n">BenH</span>    <span class="n">Improved</span> <span class="n">Tools</span><span class="o">&gt;</span><span class="n">People</span> <span class="n">Groups</span> <span class="n">layout</span> <span class="p">(</span><span class="c1">#65)</span>
+<span class="n">deaec02</span>  <span class="mi">2017</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mo">02</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Add</span> <span class="n">comments</span>
+<span class="mi">4</span><span class="n">f5af78</span>  <span class="mi">2017</span><span class="o">-</span><span class="mo">02</span><span class="o">-</span><span class="mo">02</span> <span class="n">BenHUET</span> <span class="n">Allow</span> <span class="n">to</span> <span class="n">add</span> <span class="n">custom</span> <span class="n">content</span> <span class="kn">from</span> <span class="nn">a</span> <span class="nn">child</span> <span class="nn">template</span> <span class="nn">to</span> <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span> <span class="p">(</span><span class="c1">#64)</span>
+</code></pre></div>
+
+
+<h3 id="2014">2.0.14<a class="headerlink" href="#2014" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="mi">0</span><span class="n">f9e10d</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="nf">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">14</span><span class="p">)</span> <span class="n">Version</span> <span class="n">Bump</span>
+<span class="n">dd9fddd</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Apply</span> <span class="n">fixes</span> <span class="k">from</span> <span class="nf">StyleCI</span> <span class="p">(</span><span class="c1">#78)</span>
+<span class="n">c90f111</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Simplify</span> <span class="n">the</span> <span class="n">character_id</span> <span class="k">and</span> <span class="n">corporation_id</span> <span class="n">lookups</span><span class="p">.</span>
+<span class="mi">763684</span><span class="n">a</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">17</span> <span class="n">Loïc</span> <span class="n">LEUILLIOT</span> <span class="n">fix</span> <span class="n">acl</span> <span class="n">minor</span> <span class="n">issue</span> <span class="n">related</span> <span class="k">to</span> <span class="n">job</span> <span class="n">dashboard</span> <span class="n">access</span> <span class="k">from</span> <span class="n">header</span> <span class="nf">buttons</span> <span class="p">(</span><span class="c1">#77)</span>
+<span class="mi">6916</span><span class="n">be3</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">17</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="n">Remove</span> <span class="n">wildcard</span> <span class="n">checks</span> <span class="k">as</span> <span class="n">this</span> <span class="k">is</span> <span class="n">done</span> <span class="k">with</span> <span class="ss">`hasSuperUser`</span><span class="p">.</span>
+<span class="mi">36247</span><span class="n">bf</span>  <span class="mi">2017</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">19</span> <span class="n">moe</span><span class="o">-</span><span class="n">alabel</span> <span class="n">Modified</span> <span class="n">cron</span> <span class="n">statements</span> <span class="k">to</span> <span class="n">proper</span> <span class="n">format</span><span class="p">.</span> <span class="n">Changed</span> <span class="k">from</span> <span class="mi">6</span> <span class="n">positions</span> <span class="k">to</span> <span class="mi">5</span> <span class="p">(</span><span class="c1">#70)</span>
+</code></pre></div>
+
+
+<h3 id="2015">2.0.15<a class="headerlink" href="#2015" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">c6ee343  2017-07-02 Leon Jacobs (tag: 2.0.15) Version Bump</span>
+<span class="err">758cb4c  2017-07-02 Viola   add language Chinese (#79)</span>
+<span class="err">c66c132  2017-06-30 Loïc LEUILLIOT the current delete statement is not firing the delete event from eloquent (#81)</span>
+</code></pre></div>
+
+
+<h3 id="2016">2.0.16<a class="headerlink" href="#2016" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">66edf32  2017-08-12 Leon Jacobs (tag: 2.0.16) Version bump</span>
+<span class="err">fe45072  2017-08-12 Loïc LEUILLIOT add status filters on industry tables for both character and corporation (#82)</span>
+<span class="err">68e3c93  2017-08-12 Leon Jacobs Style fixes.</span>
+<span class="err">6879b29  2017-08-12 Loïc LEUILLIOT allow SeAT owner to overload theme using two custom css file (#84)</span>
+<span class="err">eb367cf  2017-08-12 Loïc LEUILLIOT pugx service is dead, replace all badge by shields.io (#85)</span>
+<span class="err">f116ff1  2017-08-12 Leon Jacobs Style fixes.</span>
+<span class="err">2391377  2017-08-12 Loïc LEUILLIOT hide enable/disable account status if the instance is not requiring mail activation (#83)</span>
+<span class="err">d1b1527  2017-08-12 Loïc LEUILLIOT improve tables usability by adding paginate on both header and footer as well as filter feature (#80)</span>
+</code></pre></div>
+
+
+<h3 id="2017">2.0.17<a class="headerlink" href="#2017" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">0450d6c  2017-08-12 Leon Jacobs (tag: 2.0.17) Version bump</span>
+<span class="err">ac49aa9  2017-08-12 Loïc LEUILLIOT fix merge issue due to conflicting dom property between indie filter PR and paginate duplication PR (#86)</span>
+</code></pre></div>
+
+
+<h3 id="2018">2.0.18<a class="headerlink" href="#2018" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">036bce9  2017-09-17 Leon Jacobs (tag: 2.0.18) Version bump</span>
+<span class="err">4ab49a2  2017-09-17 Loïc LEUILLIOT fix hasrole method by calling magic property instead method. (#90)</span>
+<span class="err">6183416  2017-09-16 Loïc LEUILLIOT add documentation link to supervisor integration (#89)</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015 - 2020 Leon Jacobs
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/eveseat/seat" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../js/extra_tabs.js"></script>
+      
+    
+  </body>
+</html>

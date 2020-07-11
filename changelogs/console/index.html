@@ -1,0 +1,1436 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Simple EVE Api Tool Documentation">
+      
+      
+        <link rel="canonical" href="https://eveseat.github.io/docs/changelogs/console/">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
+    
+    
+      
+        <title>Console - SeAT Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.89dc9fe3.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecd4686e.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#757575">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/extra_typo.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tabs.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-119530306-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="grey" data-md-color-accent="indigo">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#console-change-logs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://eveseat.github.io/docs" title="SeAT Documentation" class="md-header-nav__button md-logo" aria-label="SeAT Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            SeAT Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Console
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eveseat/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://eveseat.github.io/docs" title="SeAT Documentation" class="md-nav__button md-logo" aria-label="SeAT Documentation">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    SeAT Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/eveseat/docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    eveseat/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Installation" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/requirements/" title="Requirements" class="md-nav__link">
+      Requirements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/basic_installation/" title="Basic Installation" class="md-nav__link">
+      Basic Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/docker_installation/" title="Docker Installation" class="md-nav__link">
+      Docker Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      Manual Installation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Manual Installation" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Manual Installation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/getting_started/" title="Getting Started" class="md-nav__link">
+      Getting Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/centos/" title="CentOS" class="md-nav__link">
+      CentOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/debian/" title="Debian" class="md-nav__link">
+      Debian
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/ubuntu/" title="Ubuntu" class="md-nav__link">
+      Ubuntu
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/manual/generic/" title="Generic" class="md-nav__link">
+      Generic
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      Webservers
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Webservers" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Webservers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/nginx/" title="Nginx" class="md-nav__link">
+      Nginx
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/traefik/" title="Traefik" class="md-nav__link">
+      Traefik
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/caddy/" title="Caddy" class="md-nav__link">
+      Caddy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../installation/webservers/apache/" title="Apache" class="md-nav__link">
+      Apache
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Upgrading
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Upgrading" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Upgrading
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/general/" title="General" class="md-nav__link">
+      General
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/from_seat_2_0/" title="From SeAT 2.0" class="md-nav__link">
+      From SeAT 2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../upgrading/from_seat_1_0/" title="From SeAT 1.0" class="md-nav__link">
+      From SeAT 1.0
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Configuration
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Configuration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/esi_configuration/" title="ESI Configuration" class="md-nav__link">
+      ESI Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
+      Email Setup
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Email Setup" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Email Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/email_setup/mailgun/" title="Mailgun" class="md-nav__link">
+      Mailgun
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/email_setup/gmail/" title="GMail" class="md-nav__link">
+      GMail
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/env_file_reference/" title="Env File Reference" class="md-nav__link">
+      Env File Reference
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/eve_administrative_contact/" title="EVE Administrative Contact" class="md-nav__link">
+      EVE Administrative Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/configuration_overload/" title="Configuration Overload" class="md-nav__link">
+      Configuration Overload
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/sde_overload/" title="SDE Overload" class="md-nav__link">
+      SDE Overload
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Admin Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Admin Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Admin Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/docker_admin/" title="Docker Admin" class="md-nav__link">
+      Docker Admin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/role_based_access_control/" title="Role Based Access Control" class="md-nav__link">
+      Role Based Access Control
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/understanding_tracking/" title="Understanding Tracking" class="md-nav__link">
+      Understanding Tracking
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../admin_guides/scaled_deployments/" title="Scaled Deployments" class="md-nav__link">
+      Scaled Deployments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Developer Guides
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developer Guides" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Developer Guides
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/developer_installation/" title="Developer Installation" class="md-nav__link">
+      Developer Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/general_guide/" title="General Guide" class="md-nav__link">
+      General Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/job_queue_flow/" title="Job Queue Flow" class="md-nav__link">
+      Job Queue Flow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/development_tips/" title="Development Tips" class="md-nav__link">
+      Development Tips
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/core_package_breakdown/" title="Core Package Breakdown" class="md-nav__link">
+      Core Package Breakdown
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/package_development/" title="Package Development" class="md-nav__link">
+      Package Development
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developer_guides/seat_api/" title="SeAT API" class="md-nav__link">
+      SeAT API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../styling/" title="Styling" class="md-nav__link">
+      Styling
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../community_packages/" title="Community Packages" class="md-nav__link">
+      Community Packages
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      About
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="About" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/contact/" title="Contact" class="md-nav__link">
+      Contact
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../about/reporting_bugs/" title="Reporting Bugs" class="md-nav__link">
+      Reporting Bugs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-pre-alpha" class="md-nav__link">
+    1.0-pre-alpha
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    1.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    1.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    1.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    1.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104" class="md-nav__link">
+    1.0.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    1.0.5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106" class="md-nav__link">
+    1.0.6
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" class="md-nav__link">
+    1.0.7
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108" class="md-nav__link">
+    1.0.8
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109" class="md-nav__link">
+    1.0.9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010" class="md-nav__link">
+    1.0.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1011" class="md-nav__link">
+    1.0.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1012" class="md-nav__link">
+    1.0.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1013" class="md-nav__link">
+    1.0.13
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1014" class="md-nav__link">
+    1.0.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1015" class="md-nav__link">
+    1.0.15
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1016" class="md-nav__link">
+    1.0.16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1017" class="md-nav__link">
+    1.0.17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha1" class="md-nav__link">
+    2.0.0-alpha1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200-alpha2" class="md-nav__link">
+    2.0.0-alpha2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#200" class="md-nav__link">
+    2.0.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201" class="md-nav__link">
+    2.0.1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#202" class="md-nav__link">
+    2.0.2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#203" class="md-nav__link">
+    2.0.3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#204" class="md-nav__link">
+    2.0.4
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/eveseat/docs/edit/master/docs/changelogs/console.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <p><img alt="SeAT" src="https://i.imgur.com/aPPOxSK.png" /></p>
+<h1 id="console-change-logs">console change logs<a class="headerlink" href="#console-change-logs" title="Permanent link">&para;</a></h1>
+<p>Generated with: <code>git log --pretty=format:"%h%&gt;(12)%ad %&lt;(7)%aN%d %s" --date=short</code></p>
+<h3 id="10-pre-alpha">1.0-pre-alpha<a class="headerlink" href="#10-pre-alpha" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">fe0da9e  2015-11-27 Leon Jacobs (tag: 1.0-pre-alpha) Update README</span>
+<span class="err">05e59b3  2015-11-20 Leon Jacobs Add a cache clearing command</span>
+<span class="err">41081d9  2015-11-03 Leon Jacobs Add the UpdateSDE command</span>
+<span class="err">9af76fb  2015-10-02 Leon Jacobs use ::class format</span>
+<span class="err">7e0bae5  2015-10-02 Leon Jacobs Add seat:admin:reset command</span>
+<span class="err">9f4e15f  2015-09-28 Leon Jacobs Update to match eveseat/eveapi model refacto</span>
+<span class="err">ee48a61  2015-09-24 Leon Jacobs Add services version lookup</span>
+<span class="err">5d7ca5f  2015-09-24 Leon Jacobs Add a &#39;live&#39; status command</span>
+<span class="err">bcd1feb  2015-09-24 Leon Jacobs Add command to update a single key</span>
+<span class="err">ee43dc5  2015-09-24 Leon Jacobs Add seat:keys:show command</span>
+<span class="err">f72ba13  2015-09-24 Leon Jacobs Style fix</span>
+<span class="err">b4bcc04  2015-09-24 Leon Jacobs Add the console.config and update version command</span>
+<span class="err">8fe529d  2015-09-24 Leon Jacobs Refactor updater commands to the Eve\ namespace</span>
+<span class="err">cc92c10  2015-09-23 Leon Jacobs Ensure only enabled keys are queued for updates</span>
+<span class="err">8f93faf  2015-09-23 Leon Jacobs Update to new eveapi version information location</span>
+<span class="err">fa5513d  2015-09-23 Leon Jacobs Queue Jobs using the UpdatePublic Job</span>
+<span class="err">887b89c  2015-09-16 Leon Jacobs Update readme with badges</span>
+<span class="err">74f82f5  2015-09-16 Leon Jacobs Prepare for packagist publish.</span>
+<span class="err">a782121  2015-09-04 Leon Jacobs Add the command to queue updates for API keys</span>
+<span class="err">14edaa8  2015-09-04 Leon Jacobs Make all commands honor the Job Container</span>
+<span class="err">12538ef  2015-09-03 Leon Jacobs Add command for the Api CallList update</span>
+<span class="err">31e0d06  2015-08-30 Leon Jacobs Add EVE Map Update command</span>
+<span class="err">20aa008  2015-08-29 Leon Jacobs Add eve:update-eve command</span>
+<span class="err">b9b7545  2015-08-29 Leon Jacobs Add the EveUpdateServerStatus command</span>
+<span class="err">c978b94  2015-08-29 Leon Jacobs Add the add:job command for testing</span>
+<span class="err">c01ddd9  2015-08-28 Leon Jacobs Start the Console package</span>
+<span class="err">f42ac27  2015-08-28 Leon Jacobs first commit</span>
+</code></pre></div>
+
+
+<h3 id="100">1.0.0<a class="headerlink" href="#100" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">8cc907d  2015-11-28 Leon Jacobs (tag: 1.0.0) Update required eveseat package versions</span>
+<span class="err">81fde9f  2015-11-28 Leon Jacobs Version Bump</span>
+</code></pre></div>
+
+
+<h3 id="101">1.0.1<a class="headerlink" href="#101" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">2a2a350  2015-11-30 Leon Jacobs (tag: 1.0.1) Add web and api versions</span>
+</code></pre></div>
+
+
+<h3 id="102">1.0.2<a class="headerlink" href="#102" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">65f650d  2015-12-01 Leon Jacobs (tag: 1.0.2) Versino Bump</span>
+</code></pre></div>
+
+
+<h3 id="103">1.0.3<a class="headerlink" href="#103" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">0f83a18  2015-12-02 Leon Jacobs (tag: 1.0.3) Version Bump</span>
+<span class="err">d0f6d31  2015-12-02 Leon Jacobs Display versions in a table</span>
+<span class="err">3d472d4  2015-12-02 Leon Jacobs Add notifications version</span>
+</code></pre></div>
+
+
+<h3 id="104">1.0.4<a class="headerlink" href="#104" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">338a397  2015-12-04 Leon Jacobs (tag: 1.0.4) Cleanup outputs and sink to a filehandler instead.</span>
+</code></pre></div>
+
+
+<h3 id="105">1.0.5<a class="headerlink" href="#105" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">7e1d13d  2015-12-07 Leon Jacobs (tag: 1.0.5) Version Bump</span>
+<span class="err">b7cac27  2015-12-07 Leon Jacobs Drop guzzle version to match that of phealng</span>
+<span class="err">91f2e03  2015-12-07 Leon Jacobs Cleanups</span>
+<span class="err">6361651  2015-12-05 Leon Jacobs Add diagnose command</span>
+<span class="err">123bc36  2015-12-04 Leon Jacobs Update README.md</span>
+</code></pre></div>
+
+
+<h3 id="106">1.0.6<a class="headerlink" href="#106" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">3f541b4  2015-12-08 Leon Jacobs (tag: 1.0.6) Version Bump</span>
+<span class="err">a49d908  2015-12-08 Leon Jacobs Revert b7cac27ebe4a1de8</span>
+</code></pre></div>
+
+
+<h3 id="107">1.0.7<a class="headerlink" href="#107" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">18bf548  2015-12-24 Leon Jacobs (tag: 1.0.7) Version Bump</span>
+<span class="err">8934a36  2015-12-24 Leon Jacobs Specify versions with ~</span>
+</code></pre></div>
+
+
+<h3 id="108">1.0.8<a class="headerlink" href="#108" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">6a6d779  2015-12-26 Leon Jacobs (tag: 1.0.8) Version Bump</span>
+<span class="err">643479f  2015-12-26 Leon Jacobs Update diagnose with some more useful debug info</span>
+<span class="err">0132b4e  2015-12-26 Leon Jacobs Add Github version lookup</span>
+</code></pre></div>
+
+
+<h3 id="109">1.0.9<a class="headerlink" href="#109" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="mi">68</span><span class="n">e5638</span>  <span class="mi">2015</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">29</span> <span class="n">Leon</span> <span class="nf">Jacobs</span> <span class="p">(</span><span class="n">tag</span><span class="p">:</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">9</span><span class="p">)</span> <span class="n">Version</span> <span class="n">Bump</span>
+<span class="mi">8</span><span class="n">b3aef9</span>  <span class="mi">2015</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">29</span> <span class="n">Leon</span> <span class="n">Jacobs</span> <span class="k">Use</span> <span class="ss">`class`</span> <span class="n">notation</span>
+</code></pre></div>
+
+
+<h3 id="1010">1.0.10<a class="headerlink" href="#1010" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">8fb5ad1  2016-01-26 Leon Jacobs (tag: 1.0.10) Version Bump</span>
+<span class="err">3e1dca5  2016-01-26 Leon Jacobs Update copyright</span>
+<span class="err">d4b2b6f  2016-01-06 Leon Jacobs Code style fix</span>
+</code></pre></div>
+
+
+<h3 id="1011">1.0.11<a class="headerlink" href="#1011" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">53fda6e  2016-04-29 Leon Jacobs (tag: 1.0.11) Version Bump</span>
+<span class="err">bb9841c  2016-04-29 Leon Jacobs Fix eveseat/seat#83 by ensuring seat:admin:reset recovers admin roles</span>
+</code></pre></div>
+
+
+<h3 id="1012">1.0.12<a class="headerlink" href="#1012" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">a6e5e54  2016-05-05 Leon Jacobs (tag: 1.0.12) Version Bump</span>
+<span class="err">0c9f1c7  2016-05-01 Leon Jacobs Add a console command to set the admin email address</span>
+</code></pre></div>
+
+
+<h3 id="1013">1.0.13<a class="headerlink" href="#1013" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">974cfad  2016-07-23 Leon Jacobs (tag: 1.0.13) Version Bump</span>
+<span class="err">f3f44dc  2016-07-23 Leon Jacobs Add analytics hit information.</span>
+<span class="err">161cdee  2016-07-22 Leon Jacobs Add ClearExpired command</span>
+<span class="err">a87e8d0  2016-07-18 Leon Jacobs Add `seat:queue:clear-expired` command.</span>
+</code></pre></div>
+
+
+<h3 id="1014">1.0.14<a class="headerlink" href="#1014" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">57132cf  2016-07-26 Leon Jacobs (tag: 1.0.14) Version Bump</span>
+<span class="err">8c9abec  2016-07-26 Leon Jacobs Fix eveseat/seat#127 by removing string concatenation in Class property</span>
+</code></pre></div>
+
+
+<h3 id="1015">1.0.15<a class="headerlink" href="#1015" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">43fc0b2  2016-07-26 Leon Jacobs (tag: 1.0.15) Version Bump</span>
+<span class="err">a1da1a0  2016-07-26 Leon Jacobs Remove string concatenation causing systax errors</span>
+</code></pre></div>
+
+
+<h3 id="1016">1.0.16<a class="headerlink" href="#1016" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">c356fd3  2016-07-27 Leon Jacobs (tag: 1.0.16) Version Bump</span>
+<span class="err">ebbebf2  2016-07-27 Leon Jacobs Default to 6 hours to reap jobs</span>
+<span class="err">40707ef  2016-07-27 Leon Jacobs Add missing trait</span>
+</code></pre></div>
+
+
+<h3 id="1017">1.0.17<a class="headerlink" href="#1017" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">950768a  2016-10-13 Leon Jacobs (tag: 1.0.17) Version bump</span>
+<span class="err">5b6c15c  2016-08-26 Leon Jacobs Escape any special characters a password.</span>
+<span class="err">ffc04bf  2016-08-25 Leon Jacobs Code style and language fixes</span>
+<span class="err">bf32149  2016-08-25 Leon Jacobs Merge pull request #1 from warlof/master</span>
+<span class="err">5c7f85b  2016-08-23 elfaus  add a control for SDE version in order to avoid downloading it again allow the user to force an SDE re-installation using --force argument</span>
+</code></pre></div>
+
+
+<h3 id="200-alpha1">2.0.0-alpha1<a class="headerlink" href="#200-alpha1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">81c6385  2016-11-26 Leon Jacobs (tag: 2.0.0-alpha1) Update composer for 2.0 packages and version 2.0.0-alpha1</span>
+<span class="err">2952e40  2016-11-05 Leon Jacobs Code formatting fixes</span>
+<span class="err">9d189dc  2016-11-03 Leon Jacobs Rename Pillow to AccessManager and update calls argument list</span>
+<span class="err">cebd0ef  2016-10-29 Leon Jacobs Update to match new class names in eveapi repo</span>
+<span class="err">e1a95e9  2016-10-27 Leon Jacobs Correctly identify the current user running the command.</span>
+<span class="err">e83fb0e  2016-10-23 Leon Jacobs Use `dispatch()` helper instead of Trait</span>
+<span class="err">953d790  2016-10-23 Leon Jacobs Update PHP, Laravel &amp; Guzzle dependencies</span>
+</code></pre></div>
+
+
+<h3 id="200-alpha2">2.0.0-alpha2<a class="headerlink" href="#200-alpha2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">a01282a  2016-11-26 Leon Jacobs (tag: 2.0.0-alpha2) Drop minimum stability, add prefer-stable and bump to 2.0.0-alpha2.</span>
+</code></pre></div>
+
+
+<h3 id="200">2.0.0<a class="headerlink" href="#200" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">6f57fa6  2016-12-08 Leon Jacobs (tag: 2.0.0) Version Bump! 2.0.0! ⚡️</span>
+<span class="err">05ec623  2016-11-29 Leon Jacobs Formatting and style fixes.</span>
+<span class="err">e5eee71  2016-11-28 Leon Jacobs Ensure the admin user is enabled when resetting the password.</span>
+</code></pre></div>
+
+
+<h3 id="201">2.0.1<a class="headerlink" href="#201" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">352d6ae  2016-12-21 Leon Jacobs (tag: 2.0.1) Version Bump</span>
+<span class="err">4112603  2016-12-21 Leon Jacobs Slightly increase wait time</span>
+<span class="err">7cba4f1  2016-12-21 Leon Jacobs Add `seat:keys:tail` command</span>
+<span class="err">868adc3  2016-12-12 Leon Jacobs Make clearing the pheal cache require a flag.</span>
+</code></pre></div>
+
+
+<h3 id="202">2.0.2<a class="headerlink" href="#202" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">9c80eee  2016-12-22 Leon Jacobs (tag: 2.0.2) Version bump</span>
+<span class="err">ca24d69  2016-12-22 Leon Jacobs Give the server status call priority</span>
+</code></pre></div>
+
+
+<h3 id="203">2.0.3<a class="headerlink" href="#203" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">5e0fd35  2017-01-12 Leon Jacobs (tag: 2.0.3) Version Bump</span>
+<span class="err">a0dc02d  2017-01-04 Leon Jacobs Update styleci config</span>
+<span class="err">197d773  2017-01-02 Leon Jacobs Apply fixes from StyleCI (#2)</span>
+<span class="err">3774d3f  2017-01-02 Leon Jacobs Add StyleCI badge</span>
+<span class="err">aa138a7  2017-01-02 Leon Jacobs Add StyleCI Configuration</span>
+<span class="err">429b084  2017-01-01 Leon Jacobs Style fixes</span>
+</code></pre></div>
+
+
+<h3 id="204">2.0.4<a class="headerlink" href="#204" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="err">8d09f93  2017-01-26 Leon Jacobs (HEAD -&gt; 2.x, tag: 2.0.4, origin/master, origin/HEAD, origin/2.x, master) Version Bump</span>
+<span class="err">d4d1160  2017-01-25 mrurb   Fixed UpdateSde not using port (#3)</span>
+<span class="err">a9a25d9  2017-01-20 Leon Jacobs Add codeclimate configuration</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015 - 2020 Leon Jacobs
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/eveseat/seat" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../js/extra_tabs.js"></script>
+      
+    
+  </body>
+</html>
