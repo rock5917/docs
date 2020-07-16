@@ -16,11 +16,14 @@ MAIL_DRIVER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
 MAIL_USERNAME=username@gmail.com
-MAIL_PASSWORD=gmailpassword
+MAIL_PASSWORD=gmailapppassword
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=username@gmail.com
 ```
-
+!!! 'gmailapppassword' is not your gmail account password):
+```bash
+https://support.google.com/accounts/answer/185833?hl=en
+```
 Done! To test, you can add some mail notification using the `Integrations` and `Notification groups`.
 
 [GMail]: https://www.gmail.com
